@@ -46,10 +46,12 @@ public class TimeServerHandler implements Runnable {
                     e1.printStackTrace();
                 }
             }
+
             if (out != null) {
                 out.close();
                 out = null;
             }
+
             if (this.socket != null) {
                 try {
                     this.socket.close();
