@@ -5,7 +5,7 @@ import java.net.Socket;
 
 /**
  * Created by chile on 2017/2/28.
- *
+ * 同步阻塞式的 time server
  */
 
 public class TimeServer {
@@ -24,7 +24,7 @@ public class TimeServer {
                     // do nothing
                 }
             } else {
-                System.out.println("The port is illeagl ...");
+                System.out.println("The port is illegal ...");
             }
         }
 

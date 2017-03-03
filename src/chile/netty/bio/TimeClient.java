@@ -1,8 +1,5 @@
 package chile.netty.bio;
 
-import jdk.nashorn.internal.codegen.types.ArrayType;
-import jdk.nashorn.internal.ir.IfNode;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,6 +10,7 @@ import java.net.Socket;
  * Created on 2017/3/2.
  * by chile.
  * function :
+ *      同步阻塞的 time client.
  */
 
 public class TimeClient {
