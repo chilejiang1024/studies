@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Created on 2017/3/6.
- * by huayu.
+ * by chile.
  * function :
  */
 
@@ -15,7 +15,12 @@ public class TimeServerHandlerExecutePool {
 
     private ExecutorService executor;
 
-    public TimeServerhandlerExecutePool(int maxPoolSize, int queueSize) {
+    /**
+     *
+     * @param maxPoolSize
+     * @param queueSize
+     */
+    public TimeServerHandlerExecutePool(int maxPoolSize, int queueSize) {
         executor = new ThreadPoolExecutor(
                 Runtime.getRuntime().availableProcessors(),
                 maxPoolSize,
