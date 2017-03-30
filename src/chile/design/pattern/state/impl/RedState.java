@@ -1,4 +1,7 @@
-package chile.design.pattern.state;
+package chile.design.pattern.state.impl;
+
+import chile.design.pattern.state.logic.Context;
+import chile.design.pattern.state.intf.IState;
 
 /**
  * Title : chile.design.pattern.state
