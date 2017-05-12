@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Title : PACKAGE_NAME
  * Description :
@@ -12,17 +14,9 @@
 public class Test {
 
     public static void main(String[] args) {
-        String s = "Bertuggggg Mete";
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0, j = s.length(); i < j; i++) {
-            if (i == 0) {
-                sb.append(s.charAt(0));
-            }
-            if (s.charAt(i) != sb.charAt(sb.length() - 1)) {
-                sb.append(s.charAt(i));
-            }
-        }
-        System.out.println(sb);
+
+        System.out.println(Test.class.getClassLoader().getResource(""));
+
     }
 
 }
