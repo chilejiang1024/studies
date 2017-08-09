@@ -25,6 +25,7 @@
         <redis.clients.version>2.7.3</redis.clients.version>
         <com.dyuproject.protostuff.version>1.0.8</com.dyuproject.protostuff.version>
         <developer.organization><![CDATA[scengine]]></developer.organization>
+        <org.apache.poi.version>3.13</org.apache.poi.version>
     </properties>
 
     <dependencies> <!-- 远程依赖库 -->
@@ -178,7 +179,17 @@
             <type>pom</type>
         </dependency>
 
-
+        <!-- poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${org.apache.poi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${org.apache.poi.version}</version>
+        </dependency>
 
 
     </dependencies>
@@ -187,8 +198,6 @@
     <build>
         <finalName>com.chile</finalName>
     </build>
-
-
 
 
 </project>
