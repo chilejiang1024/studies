@@ -1,9 +1,9 @@
-package main.chile.design.pattern.state.logic;
+package main.design.pattern.state.logic;
 
-import main.chile.design.pattern.state.intf.IState;
+import main.design.pattern.state.intf.IState;
 
 /**
- * Title : main.chile.design.pattern.state
+ * Title : main.design.pattern.state
  * Description :
  *  - 状态管理器，设置初始状态，得到当前状态
  *    提供了两个操作:

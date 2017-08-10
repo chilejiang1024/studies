@@ -1,11 +1,11 @@
-package main.chile.design.pattern.state;
+package main.design.pattern.state;
 
-import main.chile.design.pattern.state.impl.RedState;
-import main.chile.design.pattern.state.intf.IState;
-import main.chile.design.pattern.state.logic.Context;
+import main.design.pattern.state.impl.RedState;
+import main.design.pattern.state.intf.IState;
+import main.design.pattern.state.logic.Context;
 
 /**
- * Title : main.chile.design.pattern.state
+ * Title : main.design.pattern.state
  * Description :
  *  - blue -> red -> green
  *

@@ -1,7 +1,7 @@
-package main.chile.design.pattern.singleton;
+package main.design.pattern.singleton;
 
 /**
- * Title : main.chile.design.pattern.singleton
+ * Title : main.design.pattern.singleton
  * Description :
  *  - 单例模式有三个要点  一是某个类只能有一个实例
  *                      二是它必须自行创建这个实例
