@@ -12,9 +12,9 @@ package main.design.pattern.null_object;
  * @date 2017/8/10 11:17
  */
 
-public class BookFactory {
+class BookFactory {
 
-    public static Book getBook(String id) {
+    static Book getBook(String id) {
         Book book;
         switch (id) {
             case "1" :
