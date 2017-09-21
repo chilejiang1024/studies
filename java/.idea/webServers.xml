@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c57d3fad-7b28-40c6-a58c-422d16a09fc5" name="chile_vps" url="http://23.106.133.200">
+        <fileTransfer host="23.106.133.200" port="27590" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="27590" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="40656da7-42c6-43fb-b471-816df2b928c4" name="110_server" url="http://172.16.124.110">
+        <fileTransfer host="172.16.124.110" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="176bc5b0-0955-402c-9563-8cbe8d8a9858" name="16" url="http://172.16.124.16">
+        <fileTransfer host="172.16.124.16" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
