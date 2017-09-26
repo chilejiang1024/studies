@@ -8,5 +8,6 @@ public class PasswordWebApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PasswordWebApplication.class, args);
+		System.out.println("password started ...");
 	}
 }
