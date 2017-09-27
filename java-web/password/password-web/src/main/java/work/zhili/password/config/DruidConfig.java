@@ -1,0 +1,42 @@
+package work.zhili.password.config;
+
+import com.alibaba.druid.pool.DruidDataSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
+
+import javax.sql.DataSource;
+
+@Configuration
+public class DruidConfig {
+
+    @Autowired
+    private Environment env;
+
+    @Bean(initMethod = "init", destroyMethod = "close")
+    public DataSource dataSource() {
+        DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setDriverClassName(env.getProperty("spring.datasource.driver-class-name"));
+        dataSource.setUrl(env.getProperty("spring.datasource.url"));
+        dataSource.setUsername(env.getProperty("spring.datasource.username"));//用户名
+        dataSource.setPassword(env.getProperty("spring.datasource.password"));//密码
+        dataSource.setInitialSize(env.getProperty("spring.datasource.initialPoolSize", Integer.class));//初始化时建立物理连接的个数
+        dataSource.setMinIdle(env.getProperty("spring.datasource.minPoolSize", Integer.class));//最小连接池数量
+        dataSource.setMaxActive(env.getProperty("spring.datasource.maxPoolSize", Integer.class));//最大连接池数量
+        dataSource.setMaxWait(env.getProperty("spring.datasource.maxWait", Long.class));//获取连接时最大等待时间，单位毫秒
+        dataSource.setValidationQuery("SELECT 1");//用来检测连接是否有效的sql
+        dataSource.setTestOnBorrow(false);//申请连接时执行validationQuery检测连接是否有效
+        dataSource.setTestOnReturn(false);//归还连接时执行validationQuery检测连接是否有效
+        dataSource.setTestWhileIdle(true);//建议配置为true，不影响性能，并且保证安全性
+        dataSource.setPoolPreparedStatements(true);//是否缓存preparedStatement，也就是PSCache
+        dataSource.setMaxPoolPreparedStatementPerConnectionSize(
+            env.getProperty("spring.datasource.maxPoolPreparedStatementPerConnectionSize", Integer.class));
+        dataSource.setTimeBetweenEvictionRunsMillis(
+            env.getProperty("spring.datasource.timeBetweenEvictionRunsMillis", Long.class));
+        dataSource.setMinEvictableIdleTimeMillis(
+            env.getProperty("spring.datasource.minEvictableIdleTimeMillis", Long.class));
+        return dataSource;
+    }
+
+}
