@@ -1,0 +1,14 @@
+server:
+    port: 8080
+
+logging:
+    level: info
+
+spring:
+    thymeleaf:
+        cache: false
+        prefix: classpath:/templates/views/
+        suffix: .html
+        encoding: UTF-8
+        content-type: text/html
+        mode: LEGACYHTML5
