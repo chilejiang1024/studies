@@ -1,8 +1,9 @@
-package java.basics;
+package main.java.basics;
 
 /**
  * Title : java.basics
  * Description :
+ * <p> lambda basics
  * <ul>
  * <li>
  * </ul>
