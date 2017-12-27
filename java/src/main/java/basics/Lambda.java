@@ -14,7 +14,16 @@ package main.java.basics;
  */
 
 public class Lambda {
+
+    /**
+     * filter
+     */
     private static void function1() {
+
+    }
+
+
+    public static void main(String[] args) {
 
     }
 }
