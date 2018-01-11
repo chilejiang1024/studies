@@ -19,11 +19,12 @@ public class Lambda {
      * filter
      */
     private static void function1() {
-
+        String regex = "[\u4e00-\u9fff]";
+        System.out.println(" 嘿嘿啥嘿 ".split(regex).length - 1);
     }
 
 
     public static void main(String[] args) {
-
+        function1();
     }
 }
