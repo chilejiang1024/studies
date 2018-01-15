@@ -1,4 +1,4 @@
-package main.java.basics.lambda.comparator;
+package main.java.basics.comparator;
 
 import java.util.ArrayList;
 import java.util.Comparator;

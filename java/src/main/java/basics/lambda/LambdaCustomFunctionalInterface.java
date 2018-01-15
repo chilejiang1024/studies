@@ -1,4 +1,4 @@
-package main.java.basics;
+package main.java.basics.lambda;
 
 /**
  * Title : java.basics

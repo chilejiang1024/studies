@@ -1,4 +1,4 @@
-package main.java.basics.lambda.comparator;
+package main.java.basics.comparator;
 
 /**
  * Title : main.java.basics.lambda.comparator
