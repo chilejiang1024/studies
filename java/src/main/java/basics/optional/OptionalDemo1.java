@@ -1,6 +1,5 @@
 package main.java.basics.optional;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 /**
@@ -24,6 +23,11 @@ public class OptionalDemo1 {
             this.name = name;
             this.age  = age;
         }
+
+        @Override
+        public String toString() {
+            return name + age;
+        }
     }
 
     public static void main(String[] args) {
@@ -38,14 +42,50 @@ public class OptionalDemo1 {
         Optional<Human> optionalH1 = Optional.of(h1);
         Optional<Human> optionalH2 = Optional.ofNullable(h2);
 
+        // 3 : methods
+        // isPresent()
+        p(optionalH1.isPresent());
+        p(optionalH2.isPresent());
 
+        // get()
+        try {
+            p(optionalH1.get());
+            p(optionalH2.get());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
+        // ifPresent()
+        optionalH1.ifPresent(human -> p(human.toString()));
+        optionalH2.ifPresent(human -> p(human.toString()));
 
+        // orElse()
+        optionalH1.orElse(new Human("dandan", 18));
+        optionalH2.orElse(new Human("dandan", 18));
 
+        // orElseGet()
+        optionalH1.orElseGet(() -> new Human("huahua", 19));
+        optionalH2.orElseGet(() -> new Human("huahua", 19));
 
+        // orElseThrow()
+        optionalH1.orElseThrow(() -> new RuntimeException("no such element."));
+        optionalH2.orElseThrow(() -> new RuntimeException("no such element."));
 
+        // map()
+        optionalH1.map(human -> human.name);
+        optionalH2.map(human -> human.name);
 
+        // flatMap()
+        optionalH1.flatMap(human -> Optional.of(human.name));
+        optionalH2.flatMap(human -> Optional.of(human.name));
 
+        // filter()
+        optionalH1.filter(human -> human.age > 18);
+        optionalH2.filter(human -> human.age > 18);
+    }
+
+    private static void p(Object o) {
+        System.out.println(o);
     }
 
 }
