@@ -13,6 +13,17 @@ package main.java.basics.optional;
  */
 public class ValueAbsentException extends Exception {
     ValueAbsentException() {
+        super();
         System.out.println("Value absent.");
+    }
+
+    ValueAbsentException(String msg) {
+        super(msg);
+        System.out.println("Value absent.");
+    }
+
+    @Override
+    public String getMessage() {
+        return "No value present in the Optional instance";
     }
 }
