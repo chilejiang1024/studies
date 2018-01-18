@@ -3,11 +3,11 @@ package main.java.basics.optional;
 import java.util.Optional;
 
 /**
- * Title : main.java.basics.optional </br>
+ * Title : main.java.basics.optional <br>
  * Description :
- *  <p>
+ *  <p> {@link Optional} methods
  *  <ul> 
- *    <li>  </li>
+ *      <li> usage
  *  </ul>
  * @author chile
  * @version 1.0
