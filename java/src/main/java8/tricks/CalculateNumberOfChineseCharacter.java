@@ -1,7 +1,7 @@
-package main.java.tricks;
+package main.java8.tricks;
 
 /**
- * Title : main.java.tricks
+ * Title : main.java8.tricks
  * Description :
  *  <p>
  *  <ul> 

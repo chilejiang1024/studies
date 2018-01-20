@@ -1,6 +1,6 @@
-package main.java.basics.counters.implementations;
+package main.java8.basics.counters.implementations;
 
-import main.java.basics.counters.Counter;
+import main.java8.basics.counters.Counter;
 
 public class Synchronized implements Counter {
 

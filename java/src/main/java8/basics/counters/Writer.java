@@ -1,4 +1,4 @@
-package main.java.basics.counters;
+package main.java8.basics.counters;
 
 public class Writer implements Runnable {
 
