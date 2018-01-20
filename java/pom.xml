@@ -203,11 +203,11 @@
         </dependency>
 
         <!--aspose-->
-        <dependency>
-            <groupId>com.aspose</groupId>
-            <artifactId>aspose-words</artifactId>
-            <version>16.11.0</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.aspose</groupId>-->
+            <!--<artifactId>aspose-words</artifactId>-->
+            <!--<version>16.11.0</version>-->
+        <!--</dependency>-->
 
     </dependencies>
 
