@@ -6,7 +6,7 @@ package main.design.pattern.singleton;
  *  - 单例模式有三个要点  一是某个类只能有一个实例
  *                      二是它必须自行创建这个实例
  *                      三是它必须自行向整个系统提供这个实例
- *  懒汉式单例的实现
+ *  懒汉式(懒加载)单例的实现
  *
  * @author main.chile
  * @version 1.0
