@@ -1,6 +1,6 @@
-package main.java.basics.counters;
+package main.java8.basics.counters;
 
-import main.java.basics.counters.implementations.*;
+import main.java8.basics.counters.implementations.*;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

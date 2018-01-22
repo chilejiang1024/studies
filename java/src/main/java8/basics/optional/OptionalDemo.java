@@ -1,10 +1,10 @@
-package main.java.basics.optional;
+package main.java8.basics.optional;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
 /**
- * Title : main.java.basics.optional </br>
+ * Title : main.java8.basics.optional </br>
  * Description : Optional usage
  *  <p>
  *  <ul> 
