@@ -1,7 +1,7 @@
-package main.java.basics.comparator;
+package main.java8.basics.comparator;
 
 /**
- * Title : main.java.basics.lambda.comparator
+ * Title : main.java8.basics.lambda.comparator
  * Description :
  *  <p>
  *  <ul> 

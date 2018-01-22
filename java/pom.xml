@@ -202,11 +202,27 @@
             <version>1.0.0.RELEASE</version>
         </dependency>
 
+        <!--aspose-->
+        <!--<dependency>-->
+            <!--<groupId>com.aspose</groupId>-->
+            <!--<artifactId>aspose-words</artifactId>-->
+            <!--<version>16.11.0</version>-->
+        <!--</dependency>-->
+
     </dependencies>
 
-    <!-- 构建项目的最终名称 -->
     <build>
         <finalName>com.chile.codes</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 

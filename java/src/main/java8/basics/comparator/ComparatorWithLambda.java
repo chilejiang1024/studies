@@ -1,11 +1,11 @@
-package main.java.basics.comparator;
+package main.java8.basics.comparator;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
 /**
- * Title : main.java.basics.lambda.comparator
+ * Title : main.java8.basics.lambda.comparator
  * Description :
  *  <p>
  *  <ul> 

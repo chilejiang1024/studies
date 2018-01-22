@@ -1,9 +1,9 @@
-package main.java.basics.lambda;
+package main.java8.basics.lambda;
 
 import java.util.function.Function;
 
 /**
- * Title : main.java.basics <br />
+ * Title : main.java8.basics <br />
  * Description :
  *  <p>
  *  <ul> 
