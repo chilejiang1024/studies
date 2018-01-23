@@ -49,6 +49,8 @@ public class TaskManager {
      * 3
      * get singleton instance synchronized
      * better than {@link #getInstanceSynchronizedMethod()}
+     * the first null check : make sure that synchronized only execute in the first time
+     * the second null check : in case concurrence
      * @return tm
      */
     public static TaskManager getInstanceSynchronized() {
