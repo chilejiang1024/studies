@@ -80,6 +80,7 @@ public class OptionalDemo {
         upperName = name.flatMap((value) -> Optional.of(value.toUpperCase()));
         System.out.println(upperName.orElse("No value found"));
 
+        // 11 filter()
         // filter方法检查Optiona值是否满足给定条件。
         // 如果满足返回Optional实例值，否则返回空Optional。
         Optional<String> longName = name.filter((value) -> value.length() > 6);
