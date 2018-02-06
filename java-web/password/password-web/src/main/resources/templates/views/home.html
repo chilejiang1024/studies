@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>home</title>
+
+    <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <!--<link rel="stylesheet" type="text/css" href="/css/common/iview.css">-->
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <!--<script type="text/javascript" src="/js/common/vue.min.js"></script>-->
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
+    <!--<script type="text/javascript" src="/js/common/iview.min.js"></script>-->
+    <script type="text/javascript" src="/js/common/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="/js/home.js"></script>
+
+
 </head>
 <body>
-    Welcome
+
+<div id="app">
+    <i-button @click="show">Click me!</i-button>
+    <Modal v-model="visible" title="Welcome">欢迎使用 iView</Modal>
+
+
+    <i-button>Default</i-button>
+    <i-button type="primary">Primary</i-button>
+    <i-button type="ghost">Ghost</i-button>
+    <i-button type="dashed">Dashed</i-button>
+    <i-button type="text">Text</i-button>
+</div>
+
+<script>
+
+</script>
+
 </body>
 </html>

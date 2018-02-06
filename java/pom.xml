@@ -2,12 +2,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>crm</groupId> <!-- 对应前面设置的GroupId -->
+    <groupId>com.chile</groupId> <!-- 对应前面设置的GroupId -->
     <artifactId>com.chile</artifactId> <!-- 前面设置的artifactId-->
-    <packaging>war</packaging> <!-- 打包方式war -->
-    <version>1.0-SNAPSHOT</version> <!-- 版本号 -->
-    <name>com.chile Maven Webapp</name> <!-- 显示名字 -->
-    <url>http://maven.apache.org</url> <!-- 远程依赖库url -->
+    <version>1.0.0-SNAPSHOT</version> <!-- 版本号 -->
+    <name>chile's codes</name> <!-- 显示名字 -->
 
 
     <!-- 配置可变版本号,也就是常说的版本管理 （Spring、SpringMvc、Mybatis、Gson、Druid） -->
@@ -29,12 +27,12 @@
     </properties>
 
     <dependencies> <!-- 远程依赖库 -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>junit</groupId>-->
+            <!--<artifactId>junit</artifactId>-->
+            <!--<version>3.8.1</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
         <!-- 1 Spring -->
         <!-- 1.1 Spring核心 -->
@@ -191,12 +189,40 @@
             <version>${org.apache.poi.version}</version>
         </dependency>
 
+        <!--redis client jedis-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.0.0</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+
+        <!--aspose-->
+        <!--<dependency>-->
+            <!--<groupId>com.aspose</groupId>-->
+            <!--<artifactId>aspose-words</artifactId>-->
+            <!--<version>16.11.0</version>-->
+        <!--</dependency>-->
 
     </dependencies>
 
-    <!-- 构建项目的最终名称 -->
     <build>
-        <finalName>com.chile</finalName>
+        <finalName>com.chile.codes</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 

@@ -13,3 +13,5 @@ hs_err_pid*
 
 # inellij idea
 .idea/
+*.iml
+META-INF
