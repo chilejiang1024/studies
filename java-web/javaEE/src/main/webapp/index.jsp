@@ -7,23 +7,35 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>wahahahaha</title>
-  </head>
-  <body>
 
-    <form method="get" action="/index">
-      <input type="submit" name="submit" value="submit" />
-    </form>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
 
+<body>
 
+<input type="button" onClick="doFind();" value="调用一下"> <br>
 
+<p class="ajaxP">aaa</p>
 
+<script type="text/javascript">
+    function doFind() {
+        $.ajax({
+            cache: false,
+            type: "get",
+            url: "/javaee/index",
+            async: false,
+            error: function (request) {
+                alert("发送请求失败！");
+            },
+            success: function (data) {
+                console.log(data);
+                $(".ajaxP").html(data);
+            }
+        });
+    }
+</script>
 
-
-
-
-
-
-  </body>
+</body>
 </html>
