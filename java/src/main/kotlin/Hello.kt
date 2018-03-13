@@ -2,7 +2,6 @@ package main.kotlin
 
 /**
  * Title : main <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
  *  <p>
  *  <ul>
