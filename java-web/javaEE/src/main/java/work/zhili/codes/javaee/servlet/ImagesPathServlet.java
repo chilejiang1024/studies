@@ -1,6 +1,7 @@
 package work.zhili.codes.javaee.servlet;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,6 +20,7 @@ import java.io.IOException;
  * @version 1.0
  * @date 2018/3/9 14:16
  */
+@WebServlet("/images/paths")
 public class ImagesPathServlet extends HttpServlet {
 
     @Override
