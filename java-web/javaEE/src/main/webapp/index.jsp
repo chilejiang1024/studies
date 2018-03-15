@@ -17,7 +17,7 @@
 
 <input type="button" onClick="doFind();" value="调用一下"> <br>
 
-<p class="ajaxP">aaa</p>
+<p class="ajaxP">aaaa</p>
 
 <script type="text/javascript">
     function doFind() {
