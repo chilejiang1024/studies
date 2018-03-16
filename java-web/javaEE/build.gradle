@@ -1,0 +1,30 @@
+group 'work.zhili'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Javadoc) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    // use maven local repository
+    mavenLocal()
+    // use maven central repository
+    mavenCentral()
+    // config maven repository url
+    // mavenRepo urls: "http://maven.aliyun.com/nexus/content/groups/public/"
+}
+
+dependencies {
+    compile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'javax', name: 'javaee-api', version: '7.0'
+}
