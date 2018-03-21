@@ -29,7 +29,7 @@ public class StringToMD5 {
      * @return MD5 with hex (length : 32)
      */
     private static String getMD5(String originString) {
-        if (originString != null){
+        if (originString != null) {
             try {
                 MessageDigest md = MessageDigest.getInstance("MD5");
                 byte[] results = md.digest(originString .getBytes());
