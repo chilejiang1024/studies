@@ -1,4 +1,4 @@
-package main.java8.tricks;
+package main.java8.utility.tools;
 
 import java.security.MessageDigest;
 
