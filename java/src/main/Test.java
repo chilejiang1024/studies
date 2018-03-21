@@ -17,7 +17,7 @@ public class Test {
 
     public static void main(String[] args) {
 
-        test2();
+
 
     }
 
@@ -55,5 +55,11 @@ public class Test {
         map.put("code", "123123");
         System.out.println(map.toString());
 
+    }
+
+    private static void test3() {
+        HashMap<Object, Object> h1 = new HashMap<>(12);
+        HashMap<Object, Object> h2 = new HashMap<>(20);
+        System.out.println("- -");
     }
 }
