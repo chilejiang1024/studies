@@ -33,6 +33,8 @@ public class ExceptionHandler implements HandlerExceptionResolver {
      */
     private static Logger logger = LoggerFactory.getLogger(ExceptionHandler.class);
 
+    private static String API = "api";
+
     @Override
     public ModelAndView resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
                                          Object o, Exception e) {
@@ -41,20 +43,22 @@ public class ExceptionHandler implements HandlerExceptionResolver {
 
         String requestType = httpServletRequest.getHeader("X-Requested-With");
 
-        // JSON格式返回
-        Map<String, Object> responseMap = new HashMap<>(4);
-        responseMap.put("code", -1);
-        responseMap.put("msg", "System is not available, please try it later.");
-        responseMap.put("result", new HashMap<>(2));
-        String json = new Gson().toJson(responseMap);
-        httpServletResponse.setCharacterEncoding("UTF-8");
-        httpServletResponse.setContentType("application/json; charset=utf-8");
-        try {
-            httpServletResponse.getWriter().write(json);
-            httpServletResponse.getWriter().flush();
-            return null;
-        } catch (IOException ee) {
-            logger.error("", ee);
+        if (API.equals(requestType)) {
+            // JSON格式返回
+            Map<String, Object> responseMap = new HashMap<>(2);
+            responseMap.put("code", -1);
+            responseMap.put("msg", "System is not available, please try it later.");
+            responseMap.put("result", new HashMap<>(0));
+            String json = new Gson().toJson(responseMap);
+            httpServletResponse.setCharacterEncoding("UTF-8");
+            httpServletResponse.setContentType("application/json; charset=utf-8");
+            try {
+                httpServletResponse.getWriter().write(json);
+                httpServletResponse.getWriter().flush();
+                return null;
+            } catch (IOException ee) {
+                logger.error("", ee);
+            }
         }
 
         return new ModelAndView("redirect:/500.html");
