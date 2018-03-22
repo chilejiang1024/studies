@@ -33,18 +33,17 @@ public class ExceptionHandler implements HandlerExceptionResolver {
      */
     private static Logger logger = LoggerFactory.getLogger(ExceptionHandler.class);
 
-    private static String API = "api";
-
     @Override
     public ModelAndView resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
                                          Object o, Exception e) {
 
         logger.error("ExceptionHandler caught exception : ", e);
 
+        // ajax requests always contain this header
         String requestType = httpServletRequest.getHeader("X-Requested-With");
 
-        if (API.equals(requestType)) {
-            // JSON格式返回
+        if (!StringUtils.isEmpty(requestType)) {
+            // return a json
             Map<String, Object> responseMap = new HashMap<>(2);
             responseMap.put("code", -1);
             responseMap.put("msg", "System is not available, please try it later.");
