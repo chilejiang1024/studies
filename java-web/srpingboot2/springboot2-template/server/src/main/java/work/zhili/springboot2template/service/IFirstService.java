@@ -1,9 +1,8 @@
 package work.zhili.springboot2template.service;
 
-import org.springframework.stereotype.Service;
-
 /**
  * Title : work.zhili.springboot2template.service <br>
+ * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
  *  <p>
  *  <ul> 
@@ -11,13 +10,10 @@ import org.springframework.stereotype.Service;
  *  </ul>
  * @author chile
  * @version 1.0
- * @date 2018/3/21 18:42
+ * @date 2018/3/22 10:01
  */
-@Service
-public class FirstServiceImpl {
+public interface IFirstService {
 
-    public void firstMethod() {
-        throw new RuntimeException();
-    }
+    void firstMethod();
 
 }
