@@ -1,6 +1,6 @@
-package assistant;
+package main.assistant;
 
-import org.apache.commons.lang.StringUtils;
+import org.springframework.util.StringUtils;
 
 import java.io.*;
 import java.util.Scanner;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * Title : assistant
  * Company : 北京华宇元典信息服务有限公司
- * Description :
+ * Description :s
  *  <ul> 
  *    <li>  </li>
  *  </ul>
@@ -38,7 +38,7 @@ public class FilePreprocess {
                 // 去掉双引号
                 line = line.replaceAll("\"", "");
 
-                if (StringUtils.isNotBlank(line)) {
+                if (!StringUtils.isEmpty(line)) {
                     if (line.length() > 5) {
                         if (!line.matches(".*?(公司|厂|店|门市|部|社|中心|基地|园|行|铺|会|工作室|超市|处|馆|楼|场|所|厅"
                                                   + "|点|屋|站|庄|房|吧|（有限合伙）|企业|队|摊|档|院|局|浴池|户)")) {
