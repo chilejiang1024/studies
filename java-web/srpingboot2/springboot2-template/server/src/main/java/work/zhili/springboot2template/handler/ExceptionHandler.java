@@ -43,7 +43,7 @@ public class ExceptionHandler implements HandlerExceptionResolver {
         String requestType = httpServletRequest.getHeader("X-Requested-With");
 
         if (!StringUtils.isEmpty(requestType)) {
-            // return a json
+            // request comes from ajax, return a json
             Map<String, Object> responseMap = new HashMap<>(2);
             responseMap.put("code", -1);
             responseMap.put("msg", "System is not available, please try it later.");
@@ -56,10 +56,11 @@ public class ExceptionHandler implements HandlerExceptionResolver {
                 httpServletResponse.getWriter().flush();
                 return null;
             } catch (IOException ee) {
-                logger.error("", ee);
+                logger.error("Writing json object to response writer: ", ee);
             }
         }
 
+        // if request is not comes from ajax, redirect to 500.html or index.html
         return new ModelAndView("redirect:/500.html");
     }
 }
