@@ -28,7 +28,7 @@ public class StringToMD5 {
      * @param originString origin string
      * @return MD5 with hex (length : 32)
      */
-    private static String getMD5(String originString) {
+    public static String getMD5(String originString) {
         if (originString != null) {
             try {
                 MessageDigest md = MessageDigest.getInstance("MD5");
