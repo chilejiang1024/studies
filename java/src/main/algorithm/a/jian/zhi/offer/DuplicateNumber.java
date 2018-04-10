@@ -26,7 +26,7 @@ public class DuplicateNumber {
 
     public static void main(String[] args) {
         // n = 8
-        int[] a = {2, 5, 6, 4, 3, 1, 2, 2};
+        int[] a = {2, 5, 6, 4, 3, 1, 0, 7};
         int b = findOneDuplicateNumber(a);
         out.println(Arrays.toString(a));
         out.println(b);
@@ -35,15 +35,12 @@ public class DuplicateNumber {
     private static int findOneDuplicateNumber(int[] a) {
         int i = 0, t = 0, d = -1;
         int n = a.length;
-        while (d < 0 && i < n) {
-            t = a[i];
-            if (t == a[t] && t != i) {
-                d = t;
-                break;
-            }
-            if (t == i) {
-                i++;
-            } else {
+        for (; i < n; i++) {
+            if ((t = a[i]) != i) {
+                if (t == a[t]) {
+                    d = t;
+                    break;
+                }
                 swap(a, i, t);
             }
         }
