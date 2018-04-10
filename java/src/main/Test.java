@@ -3,6 +3,8 @@ package main;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static java.lang.System.out;
+
 /**
  * Title : PACKAGE_NAME
  * Description :
@@ -17,7 +19,7 @@ public class Test {
 
     public static void main(String[] args) {
 
-
+        test4();
 
     }
 
@@ -61,5 +63,12 @@ public class Test {
         HashMap<Object, Object> h1 = new HashMap<>(12);
         HashMap<Object, Object> h2 = new HashMap<>(20);
         System.out.println("- -");
+    }
+
+    private static void test4() {
+        out.println( 7 % 4);
+        out.println( 7 & 4);
+        out.println(-7 % 4);
+        out.println(-7 & 4);
     }
 }
