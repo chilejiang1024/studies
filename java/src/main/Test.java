@@ -2,6 +2,7 @@ package main;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static java.lang.System.out;
 
@@ -19,7 +20,7 @@ public class Test {
 
     public static void main(String[] args) {
 
-        test4();
+        test7();
 
     }
 
@@ -70,5 +71,39 @@ public class Test {
         out.println( 7 & 4);
         out.println(-7 % 4);
         out.println(-7 & 4);
+    }
+
+    private static void test5() {
+        int a = Integer.MAX_VALUE; // 0x7fffffff  0111 1111 1111 1111 1111 1111 1111 1111
+        out.println(a + 1 < a);
+        out.println(a + 1);
+    }
+
+    private static int test6(int n) {
+        int[] a = {1, 1, 2};
+        if (n <= 3) {
+            return a[n - 1];
+        }
+        while (n-- >= 3) {
+            a[2] = a[0] + a[1];
+            a[0] = a[1];
+            a[1] = a[2];
+        }
+        return a[2];
+    }
+
+    private static void test7() {
+        int[] a = {1, 2, 5, 7, 9};
+        int[] b = {1, 4, 6, 8, 9, 10, 17};
+        int i = 0, j = 0;
+        int n = 4;
+        while (n != 0) {
+            out.print(n);
+
+
+        }
+
+
+
     }
 }
