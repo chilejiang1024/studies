@@ -98,12 +98,19 @@ public class Test {
         int i = 0, j = 0;
         int n = 4;
         while (n != 0) {
-            out.print(n);
-
-
+            if (a[i] == b[j]) {
+                out.print(a[i]);
+                i++;
+                j++;
+            } else if (a[i] < b[j]) {
+                out.print(a[i]);
+                i++;
+            } else {
+                out.print(b[j]);
+                j++;
+            }
+            n--;
         }
-
-
 
     }
 }
