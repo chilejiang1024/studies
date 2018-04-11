@@ -10,8 +10,8 @@ import static java.lang.System.out;
  * 
  * Consider the following matrix:
  * [
- *     [1,   4,  7, 11, 15],
- *     [2,   5,  8, 12, 19],
+ *     [1,   4,  7, 11, 15],         a[0][0] a[0][1] ... a[0][4]
+ *     [2,   5,  8, 12, 19],         a[1][0] a[1][1] ... a[1][4]
  *     [3,   6,  9, 16, 22],
  *     [10, 13, 14, 17, 24],
  *     [18, 21, 23, 26, 30]
@@ -19,6 +19,8 @@ import static java.lang.System.out;
  * 
  * Given target = 5, return true.
  * Given target = 20, return false.
+ *
+ * > 这个只能从右上或者左下下手
  * 
  * @author chile
  * @version 1.0
@@ -32,7 +34,7 @@ public class FindNumberIn2DMatrix {
                      {3,   6,  9, 16, 22}, 
                      {10, 13, 14, 17, 24}, 
                      {18, 21, 23, 26, 30}};
-        int b = 7;
+        int b = 18;
         boolean found = findTheNumber(a, b);
 
         out.println("Given target = " + b + ", return " + (found ? "true." : "false."));
@@ -41,21 +43,22 @@ public class FindNumberIn2DMatrix {
     private static boolean findTheNumber(int[][] a, int b) {
         int w = a[0].length, h = a.length;
 
-        if (b < a[0][0] || b > a[w - 1][h - 1]) {
+        if (w * h ==0 || b < a[0][0] || b > a[h - 1][w - 1]) {
             return false;
         }
 
-        int i = w - 1, j = h - 1;
-        while (i != -1 && j != -1) {
-            if (b == a[i][j]) {
-                return true;
-            }
-            if (i != 0 && b < a[i - 1][h - 1]) {
-                i--;
+        int i = 0, j = w - 1;
+        while (i < h && j != -1) {
+            if (b > a[i][j]) {
+                i++;
             } else if (b < a[i][j]) {
                 j--;
+            } else {
+                return true;
             }
+
         }
+
 
         return false;
     }
