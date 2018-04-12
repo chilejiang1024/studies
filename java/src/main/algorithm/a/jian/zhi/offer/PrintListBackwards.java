@@ -1,5 +1,6 @@
 package main.algorithm.a.jian.zhi.offer;
 
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Stack;
 
@@ -53,13 +54,37 @@ public class PrintListBackwards {
     private static void method1(Node<Integer> node) {
         Node<Integer> tempNode = node;
         Stack<Node> stack = new Stack<>();
-        while (Objects.nonNull(tempNode.next)) {
+        while (Objects.nonNull(tempNode)) {
             stack.add(tempNode);
             tempNode = tempNode.next;
         }
         while (!stack.isEmpty()) {
             out.print(stack.pop().item);
         }
+    }
+
+    /**
+     * 牛客网 AC code
+     * https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035
+     * @param listNode
+     * @return
+     */
+    public static ArrayList<Integer> printListFromTailToHead(Node<Integer> listNode) {
+        ArrayList<Integer> resultList = new ArrayList<>();
+        if (null == listNode) {
+            return resultList;
+        }
+
+        Stack<Node<Integer>> stack = new Stack<>();
+        while (null != listNode) {
+            stack.add(listNode);
+            listNode = listNode.next;
+        }
+        while (!stack.isEmpty()) {
+            resultList.add(stack.pop().item);
+        }
+
+        return resultList;
     }
 
 
