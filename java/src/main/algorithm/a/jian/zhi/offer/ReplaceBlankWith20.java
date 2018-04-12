@@ -1,5 +1,7 @@
 package main.algorithm.a.jian.zhi.offer;
 
+import java.util.Objects;
+
 import static java.lang.System.out;
 
 /**
@@ -33,6 +35,10 @@ public class ReplaceBlankWith20 {
     }
 
     private static void replace(StringBuilder sb) {
+        if (Objects.isNull(sb)) {
+            return;
+        }
+
         int n = sb.length();
         for (int i = 0; i < n; i++) {
             if (sb.charAt(i) == ' ') {
