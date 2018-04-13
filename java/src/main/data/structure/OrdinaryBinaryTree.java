@@ -1,5 +1,9 @@
 package main.data.structure;
 
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Stack;
+
 import static java.lang.System.out;
 
 /**
@@ -39,6 +43,10 @@ public class OrdinaryBinaryTree {
          *       2   5 7   8
          *      ╱ ╲         ╲
          *     3   4         9
+         *
+         *   preorder  : 0123456789
+         *   inorder   : 3241507689
+         *   postorder : 1234567890
          */
         // build test binary tree
         nodes[0].left = nodes[1];
@@ -56,9 +64,11 @@ public class OrdinaryBinaryTree {
 
         recursivePreorderTraversal(rootNode);
         out.println();
-        recursiveInorderTraversal(rootNode);
-        out.println();
-        recursivePostorderTraversal(rootNode);
+//        recursiveInorderTraversal(rootNode);
+//        out.println();
+//        recursivePostorderTraversal(rootNode);
+//        out.println();
+        preorderTraversal(rootNode);
         out.println();
     }
 
@@ -84,6 +94,26 @@ public class OrdinaryBinaryTree {
             recursivePreorderTraversal(root.left);
             recursivePreorderTraversal(root.right);
             out.print(root.value);
+        }
+    }
+
+    private static void preorderTraversal(Node root) {
+        Stack<Node> s = new Stack<>();
+        Node p = root;
+        while (null != p || !s.isEmpty()) {
+            out.print(p.value);
+            if (null != p.left) {
+                s.push(p);
+                p = p.left;
+            } else if (!s.isEmpty()){
+                p = s.pop().right;
+                while (null == p && !s.isEmpty()) {
+                    p = s.pop().right;
+                }
+            } else {
+                p = p.right;
+            }
+
         }
     }
 
