@@ -36,6 +36,12 @@ public class RebuildBinaryTree {
         reConstructBinaryTree(pre, in);
     }
 
+    /**
+     * According to the preorder and inorder traversal result, rebuild the binary tree
+     * @param pre preorder traversal result
+     * @param in  inorder traversal result
+     * @return    the root node of the binary tree
+     */
     private static TreeNode reConstructBinaryTree(int [] pre, int [] in) {
 
         return null;
