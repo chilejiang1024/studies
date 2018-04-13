@@ -1,9 +1,9 @@
-package main.chile.some.override;
+package main.frameworks.some.override;
 
 import static java.lang.System.out;
 
 /**
- * Title : main.chile.some
+ * Title : main.chile.some.override
  * Company : 北京华宇元典信息服务有限公司
  * Description :
  *  <ul> 
@@ -11,14 +11,13 @@ import static java.lang.System.out;
  *  </ul>
  * @author chile
  * @version 1.0
- * @date 2017/12/12 11:20
+ * @date 2017/12/12 11:25
  */
 
-public class OverrideSuperClassStaticMethod extends SuperClass {
+public class SuperClass {
 
-    // @Override
     public static void print() {
-        out.print("sub class print.");
+        out.println("super class print.");
     }
 
 }

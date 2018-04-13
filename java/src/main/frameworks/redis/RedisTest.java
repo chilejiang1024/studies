@@ -1,4 +1,4 @@
-package main.chile.redis;
+package main.frameworks.redis;
 
 import org.springframework.data.redis.core.RedisTemplate;
 
