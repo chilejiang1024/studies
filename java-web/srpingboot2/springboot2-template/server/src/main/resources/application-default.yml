@@ -1,3 +1,25 @@
 
+spring:
+    profiles: dev
+    datasource:
+        url: jdbc:mysql://0.0.0.0:3306/db_name?useUnicode=true&characterEncoding=utf8&allowMultiQueries=yes&autoReconnect=true&autoReconnectForPools=true&useSSL=false
+        username: root
+        password: *****
+        driver-class-name: com.mysql.jdbc.Driver
+        acquireIncrement: 5
+        initialPoolSize: 5
+        minPoolSize: 5
+        maxPoolSize: 20
+        maxWait: 60000
+        maxPoolPreparedStatementPerConnectionSize: 100
+        timeBetweenEvictionRunsMillis: 3000
+        minEvictableIdleTimeMillis: 300000
+    thymeleaf:
+        cache: false
+        prefix: classpath:/templates/
+        suffix: .html
+        encoding: UTF-8
+        mode: LEGACYHTML5
+
 server:
     port: 22222
