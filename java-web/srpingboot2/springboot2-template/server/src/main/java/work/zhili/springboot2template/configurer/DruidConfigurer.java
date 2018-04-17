@@ -18,7 +18,7 @@ import org.springframework.core.env.Environment;
  * @date 2018-4-17 13:43:39
  */
 @Configuration
-public class DruidConfiguration {
+public class DruidConfigurer {
 
     private Environment env;
 

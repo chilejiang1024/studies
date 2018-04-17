@@ -19,7 +19,7 @@ import java.io.IOException;
  * @date 2018-4-17 13:43:19
  */
 @Configuration
-public class WebConfiguration {
+public class WebConfigurer {
 
     @Bean
     public FilterRegistrationBean someFilterRegistration() {
