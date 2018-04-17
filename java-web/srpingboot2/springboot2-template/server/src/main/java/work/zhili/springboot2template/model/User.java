@@ -12,4 +12,8 @@ package work.zhili.springboot2template.model;
  * @date 2018/4/17 11:18
  */
 public class User {
+    private String userName;
+    private String passowrd;
+    private String nickName;
+    private int    gender;
 }
