@@ -7,6 +7,17 @@ import org.springframework.context.annotation.Configuration;
 import javax.servlet.*;
 import java.io.IOException;
 
+/**
+ * Title : work.zhili.springboot2template.configurer <br>
+ * Description :
+ *  <p>
+ *  <ul>
+ *      <li>
+ *  </ul>
+ * @author chile
+ * @version 1.0
+ * @date 2018-4-17 13:43:19
+ */
 @Configuration
 public class WebConfiguration {
 
