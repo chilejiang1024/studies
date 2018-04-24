@@ -64,11 +64,17 @@ public class OrdinaryBinaryTree {
 
         recursivePreorderTraversal(rootNode);
         out.println();
-//        recursiveInorderTraversal(rootNode);
-//        out.println();
-//        recursivePostorderTraversal(rootNode);
-//        out.println();
-        preorderTraversal(rootNode);
+        preorderTraversal2(rootNode);
+        out.println();
+
+        recursiveInorderTraversal(rootNode);
+        out.println();
+        inorderTraversal(rootNode);
+        out.println();
+
+        recursivePostorderTraversal(rootNode);
+        out.println();
+        postorderTraversal(rootNode);
         out.println();
     }
 
@@ -117,4 +123,39 @@ public class OrdinaryBinaryTree {
         }
     }
 
+    private static void preorderTraversal2(Node root) {
+        Stack<Node> s = new Stack<>();
+        Node p = root;
+        while (p != null || !s.isEmpty()) {
+            while (p != null) {
+                out.print(p.value);
+                s.push(p);
+                p = p.left;
+            }
+            if (!s.isEmpty()) {
+                p = s.pop().right;
+            }
+        }
+    }
+
+    private static void inorderTraversal(Node root) {
+        Stack<Node> s = new Stack<>();
+        Node p = root;
+        while (p != null || !s.isEmpty()) {
+            while (p != null) {
+                s.push(p);
+                p = p.left;
+            }
+            if (!s.isEmpty()) {
+                p = s.pop();
+                out.print(p.value);
+                p = p.right;
+            }
+        }
+
+    }
+
+    private static void postorderTraversal(Node root) {
+        // TODO: 2018/4/24 postorder traversal
+    }
 }
