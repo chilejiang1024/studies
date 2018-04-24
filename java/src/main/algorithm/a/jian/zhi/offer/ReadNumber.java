@@ -32,9 +32,7 @@ public class ReadNumber {
         System.out.println(readTheNumber(10001));
         System.out.println(readTheNumber(10001001));
         System.out.println(readTheNumber(109030405));
-
-
-
+        System.out.println(readTheNumber(Integer.MAX_VALUE));
     }
 
     private static String readTheNumber(int number) {
