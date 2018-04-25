@@ -20,7 +20,7 @@ public class Test {
 
     public static void main(String[] args) {
 
-        test7();
+        new Test().test7();
 
     }
 
@@ -74,7 +74,8 @@ public class Test {
     }
 
     private static void test5() {
-        int a = Integer.MAX_VALUE; // 0x7fffffff  0111 1111 1111 1111 1111 1111 1111 1111
+        // 0x7fffffff  0111 1111 1111 1111 1111 1111 1111 1111
+        int a = Integer.MAX_VALUE;
         out.println(a + 1 < a);
         out.println(a + 1);
     }
@@ -92,7 +93,27 @@ public class Test {
         return a[2];
     }
 
-    private static void test7() {
+    abstract class SomeClass {
+        abstract void a();
+    }
 
+    private void test7() {
+        SomeClass sc = new SomeClass() {
+            @Override
+            void a() {
+                System.out.println("a");
+            }
+        };
+        sc.a();
+        Runnable run = new Runnable(){
+
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+
+            }
+
+        };
+        run.run();
     }
 }
