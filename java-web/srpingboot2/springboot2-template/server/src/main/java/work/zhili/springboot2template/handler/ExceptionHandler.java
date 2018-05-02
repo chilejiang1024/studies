@@ -49,6 +49,7 @@ public class ExceptionHandler implements HandlerExceptionResolver {
             responseMap.put("msg", "System is not available, please try it later.");
             responseMap.put("result", new HashMap<>(0));
             String json = new Gson().toJson(responseMap);
+            httpServletResponse.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             httpServletResponse.setCharacterEncoding("UTF-8");
             httpServletResponse.setContentType("application/json; charset=utf-8");
             try {
@@ -61,6 +62,6 @@ public class ExceptionHandler implements HandlerExceptionResolver {
         }
 
         // if request is not comes from ajax, redirect to 500.html or index.html
-        return new ModelAndView("redirect:/500.html");
+        return new ModelAndView("redirect:/500");
     }
 }
