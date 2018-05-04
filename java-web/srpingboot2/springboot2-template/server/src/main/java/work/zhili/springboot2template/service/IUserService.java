@@ -1,12 +1,12 @@
-package work.zhili.springboot2template.dao;
+package work.zhili.springboot2template.service;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import work.zhili.springboot2template.model.User;
 
 import java.util.List;
 
 /**
- * Title : work.zhili.springboot2template.dao <br>
+ * Title : work.zhili.springboot2template.service <br>
  * Description :
  *  <p>
  *  <ul> 
@@ -14,13 +14,12 @@ import java.util.List;
  *  </ul>
  * @author chile
  * @version 1.0
- * @date 2018/4/17 11:17
+ * @date 2018/5/4 14:18
  */
-@Component
-public interface IUserMapper {
+public interface IUserService {
 
     /**
-     * a test of dao
+     * just for testing
      * @return {User, ...}
      */
     List<User> queryAllForTesting();
