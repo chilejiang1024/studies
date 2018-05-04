@@ -1,8 +1,8 @@
 
 spring:
-    profiles: dev
+    profiles: default
     datasource:
-        url: jdbc:mysql://0.0.0.0:3306/db_name?useUnicode=true&characterEncoding=utf8&allowMultiQueries=yes&autoReconnect=true&autoReconnectForPools=true&useSSL=false
+        url: jdbc:mysql://*****:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=yes&autoReconnect=true&autoReconnectForPools=true&useSSL=false
         username: root
         password: *****
         driver-class-name: com.mysql.jdbc.Driver
