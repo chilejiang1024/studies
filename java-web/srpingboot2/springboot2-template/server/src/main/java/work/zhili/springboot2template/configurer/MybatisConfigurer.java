@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -26,6 +27,7 @@ import static work.zhili.springboot2template.core.constant.BaseConstants.MODEL_P
  * @date 2018/4/17 13:51
  */
 @Configuration
+@MapperScan("work.zhili.springboot2template.dao")
 public class MybatisConfigurer {
 
     @Bean
