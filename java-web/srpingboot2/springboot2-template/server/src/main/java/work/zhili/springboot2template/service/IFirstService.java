@@ -14,6 +14,9 @@ package work.zhili.springboot2template.service;
  */
 public interface IFirstService {
 
+    /**
+     * do nothing, but throw a {@link RuntimeException}
+     */
     void firstMethod();
 
 }
