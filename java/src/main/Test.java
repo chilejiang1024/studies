@@ -20,7 +20,7 @@ public class Test {
 
     public static void main(String[] args) {
 
-        new Test().test7();
+        new Test().test8();
 
     }
 
@@ -115,5 +115,26 @@ public class Test {
 
         };
         run.run();
+    }
+
+    private void test8() {
+        new A();
+        class A {
+
+        }
+    }
+
+    class A {
+
+    }
+
+    private void test9() {
+
+    }
+}
+
+class A {
+    public static void main(String[] args) {
+
     }
 }
