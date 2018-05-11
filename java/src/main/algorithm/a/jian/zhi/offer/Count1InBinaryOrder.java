@@ -13,6 +13,11 @@ package main.algorithm.a.jian.zhi.offer;
  */
 public class Count1InBinaryOrder {
 
+    /**
+     * time complexity : O(count)
+     * @param n the number
+     * @return  count of 1
+     */
     private static int count(int n) {
         int count = 0;
         while (n != 0) {
@@ -22,6 +27,11 @@ public class Count1InBinaryOrder {
         return count;
     }
 
+    /**
+     * time complexity : O(32)
+     * @param n  the number
+     * @return   count of 1
+     */
     private static int count1(int n) {
         int count = 0;
         int flag  = 1;
