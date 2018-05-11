@@ -18,12 +18,6 @@ import static java.lang.System.out;
  */
 public class Test {
 
-    public static void main(String[] args) {
-
-        new Test().test8();
-
-    }
-
     private static void test1() {
         List<Map<String, String>> aa = new ArrayList<>();
         aa.add(new HashMap<String, String>() {{put("id", "asd");}});
@@ -73,24 +67,18 @@ public class Test {
         out.println(-7 & 4);
     }
 
+    /**
+     * find a number make a + 1 < a right
+     */
     private static void test5() {
-        // 0x7fffffff  0111 1111 1111 1111 1111 1111 1111 1111
+        // 0x7fffffff  ->  0111 1111 1111 1111 1111 1111 1111 1111
         int a = Integer.MAX_VALUE;
         out.println(a + 1 < a);
         out.println(a + 1);
     }
 
     private static int test6(int n) {
-        int[] a = {1, 1, 2};
-        if (n <= 3) {
-            return a[n - 1];
-        }
-        while (n-- >= 3) {
-            a[2] = a[0] + a[1];
-            a[0] = a[1];
-            a[1] = a[2];
-        }
-        return a[2];
+        return 0;
     }
 
     abstract class SomeClass {
@@ -105,16 +93,16 @@ public class Test {
             }
         };
         sc.a();
-        Runnable run = new Runnable(){
 
-            @Override
-            public void run() {
-                // TODO Auto-generated method stub
-
+        Runnable run = () -> {
+            // TODO Auto-generated method stub
+            System.out.println(Thread.currentThread().getName());
+            int count = 10;
+            while (count-- != 0) {
+                System.out.println(count);
             }
-
         };
-        run.run();
+        new Thread(run).start();
     }
 
     private void test8() {
@@ -128,7 +116,16 @@ public class Test {
 
     }
 
-    private void test9() {
+    private static void test9() {
+
+    }
+
+    /**
+     * the main method
+     */
+    public static void main(String[] args) {
+
+        new Test().test7();
 
     }
 }
