@@ -2,6 +2,9 @@ package work.zhili.springboot2template.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Title : work.zhili.springboot2template.controller <br>
@@ -20,6 +23,17 @@ public class NavigationController {
     @GetMapping("/")
     public String root() {
         return "index";
+    }
+
+    @GetMapping("/test/1")
+    public String test1(HttpServletRequest request, RedirectAttributes attributes) {
+        attributes.addAttribute("2", "2");
+        return "redirect:/test/{2}";
+    }
+
+    @GetMapping("/test/2")
+    public String test2() {
+        return "/test/2";
     }
 
 }
