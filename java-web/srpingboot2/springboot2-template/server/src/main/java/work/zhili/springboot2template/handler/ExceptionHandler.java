@@ -49,12 +49,15 @@ public class ExceptionHandler implements HandlerExceptionResolver {
             responseMap.put("msg", "System is not available, please try it later.");
             responseMap.put("result", new HashMap<>(0));
             String json = new Gson().toJson(responseMap);
+            // aimed to split the default error text
+            json += "\n";
+
             httpServletResponse.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             httpServletResponse.setCharacterEncoding("UTF-8");
             httpServletResponse.setContentType("application/json; charset=utf-8");
             try {
-                httpServletResponse.getWriter().write(json);
-                httpServletResponse.getWriter().flush();
+                httpServletResponse.getOutputStream().write(json.getBytes());
+                httpServletResponse.getOutputStream().flush();
                 return null;
             } catch (IOException ee) {
                 logger.error("Writing json object to response writer: ", ee);
