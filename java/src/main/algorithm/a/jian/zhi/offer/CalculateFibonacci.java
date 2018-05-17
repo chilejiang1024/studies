@@ -14,7 +14,7 @@ public class CalculateFibonacci {
 
     public static void main(String[] args) {
         out.println(method1(5));
-        out.println(method2(5));
+        out.println(method2(13));
     }
 
     private static int method1(int n) {
