@@ -1,6 +1,7 @@
 package work.zhili.springboot2template.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import work.zhili.springboot2template.dao.IUserMapper;
 import work.zhili.springboot2template.model.User;
@@ -30,6 +31,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
+    @Cacheable(cacheNames = "user", key = "#root.method.name")
     public List<User> queryAllForTesting() {
         return userMapper.queryAllForTesting();
     }

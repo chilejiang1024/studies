@@ -1,5 +1,7 @@
 package work.zhili.springboot2template.model;
 
+import java.io.Serializable;
+
 /**
  * Title : work.zhili.springboot2template.model <br>
  * Description :
@@ -11,7 +13,10 @@ package work.zhili.springboot2template.model;
  * @version 1.0
  * @date 2018/4/17 11:18
  */
-public class User {
+public class User implements Serializable {
+
+    private static final long serialVersionUID = 6964836224325331338L;
+
     private int    id;
     private String username;
     private String password;
