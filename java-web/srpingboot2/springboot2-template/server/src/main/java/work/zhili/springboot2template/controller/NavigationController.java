@@ -25,6 +25,11 @@ public class NavigationController {
         return "index";
     }
 
+    @GetMapping("/user/register")
+    public String user() {
+        return "/user/register";
+    }
+
     @GetMapping("/test/1")
     public String test1(HttpServletRequest request, RedirectAttributes attributes) {
         attributes.addAttribute("2", "2");
