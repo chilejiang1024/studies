@@ -10,3 +10,4 @@ CREATE TABLE `user` (
   `vaild` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1 : vaild, 0 : invaild',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
