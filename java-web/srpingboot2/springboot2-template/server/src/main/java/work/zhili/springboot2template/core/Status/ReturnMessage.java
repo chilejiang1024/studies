@@ -4,11 +4,9 @@ import com.google.gson.JsonObject;
 
 /**
  * Title : work.zhili.springboot2template.core.Status <br>
- * Description :
- *  <p>
- *  <ul> 
- *      <li>
- *  </ul>
+ * Description : <br>
+ *   <p> return message when the api request successfully
+ *
  * @author chile
  * @version 1.0
  * @date 2018/5/22 13:13
