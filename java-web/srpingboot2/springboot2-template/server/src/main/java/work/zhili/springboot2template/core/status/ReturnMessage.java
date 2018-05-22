@@ -1,9 +1,9 @@
-package work.zhili.springboot2template.core.Status;
+package work.zhili.springboot2template.core.status;
 
 import com.google.gson.JsonObject;
 
 /**
- * Title : work.zhili.springboot2template.core.Status <br>
+ * Title : work.zhili.springboot2template.core.status <br>
  * Description : <br>
  *   <p> return message when the api request successfully
  *
