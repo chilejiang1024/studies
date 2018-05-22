@@ -3,6 +3,9 @@ package work.zhili.springboot2template.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import work.zhili.springboot2template.core.Status.ReturnMessage;
+import work.zhili.springboot2template.core.util.UUIDUtils;
+import work.zhili.springboot2template.model.User;
 import work.zhili.springboot2template.service.IUserService;
 
 /**
@@ -36,7 +39,11 @@ public class UserController {
     @PostMapping("/v1/user/add")
     @ResponseBody
     public Object add(@RequestParam String username, @RequestParam String password) {
-        System.out.println(username + password);
-        return "";
+        User user = new User();
+        user.setId(UUIDUtils.getUuid());
+        user.setUsername(username);
+        user.setPassword(password);
+        userService.insert(user);
+        return ReturnMessage.SUCCESSFUL_MESSAGE;
     }
 }

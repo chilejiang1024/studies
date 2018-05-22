@@ -1,6 +1,7 @@
 package work.zhili.springboot2template.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Title : work.zhili.springboot2template.model <br>
@@ -17,17 +18,20 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = 6964836224325331338L;
 
-    private int    id;
+    private String    id;
     private String username;
     private String password;
     private String nickname;
     private int    gender;
+    private Date   dateCreated;
+    private Date   dateUpdated;
+    private int    vaild;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -61,5 +65,29 @@ public class User implements Serializable {
 
     public void setGender(int gender) {
         this.gender = gender;
+    }
+
+    public Date getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(Date dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public Date getDateUpdated() {
+        return dateUpdated;
+    }
+
+    public void setDateUpdated(Date dateUpdated) {
+        this.dateUpdated = dateUpdated;
+    }
+
+    public int getVaild() {
+        return vaild;
+    }
+
+    public void setVaild(int vaild) {
+        this.vaild = vaild;
     }
 }

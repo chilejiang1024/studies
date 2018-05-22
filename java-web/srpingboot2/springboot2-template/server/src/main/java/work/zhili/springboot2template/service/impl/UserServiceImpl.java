@@ -35,4 +35,9 @@ public class UserServiceImpl implements IUserService {
     public List<User> queryAllForTesting() {
         return userMapper.queryAllForTesting();
     }
+
+    @Override
+    public void insert(User user) {
+        userMapper.insert(user);
+    }
 }

@@ -25,4 +25,9 @@ public interface IUserMapper {
      */
     List<User> queryAllForTesting();
 
+    /**
+     * insert a user
+     * @param user the user
+     */
+    void insert(User user);
 }
