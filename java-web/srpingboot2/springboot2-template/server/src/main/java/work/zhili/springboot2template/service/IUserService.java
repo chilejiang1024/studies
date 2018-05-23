@@ -29,4 +29,10 @@ public interface IUserService {
      * @param user the user
      */
     void insert(User user);
+
+    /**
+     * delete a user (make it invalid)
+     * @param userId the user's id
+     */
+    void delete(String userId);
 }

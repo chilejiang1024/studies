@@ -30,4 +30,10 @@ public interface IUserMapper {
      * @param user the user
      */
     void insert(User user);
+
+    /**
+     * delete a user
+     * @param userId the user's id
+     */
+    void delete(String userId);
 }

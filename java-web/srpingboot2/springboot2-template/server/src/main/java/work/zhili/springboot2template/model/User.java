@@ -1,5 +1,7 @@
 package work.zhili.springboot2template.model;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -18,13 +20,22 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = 6964836224325331338L;
 
+    @NotNull
+    @Size(min = 32, max = 32)
     private String id;
+
     private String username;
+
     private String password;
+
     private String nickname;
+
     private int    gender;
+
     private Date   dateCreated;
+
     private Date   dateUpdated;
+
     private int    vaild;
 
     public String getId() {

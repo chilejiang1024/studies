@@ -30,4 +30,10 @@
             ( #{id}, #{username}, #{password}, #{nickname}, #{gender}, now(), now(), 1 )
     </insert>
 
+    <delete id="delete">
+        delete from
+            test.user
+        where
+            id = #{userId}
+    </delete>
 </mapper>
