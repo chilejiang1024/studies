@@ -1,0 +1,52 @@
+package work.zhili.springboot2template.core.http.response;
+
+/**
+ * Title : work.zhili.springboot2template.core.status <br>
+ * Description : <br>
+ *   <p> return message when the api request successfully
+ *
+ * @author chile
+ * @version 1.0
+ * @date 2018/5/22 13:13
+ */
+public class Response<E> {
+
+    /**
+     * default successful message
+     */
+    public static final Response SUCCESSFUL_MESSAGE;
+
+    static {
+        SUCCESSFUL_MESSAGE = successfulMessage();
+    }
+
+    private static Response successfulMessage() {
+        return new Response(ResultCode.SUCCESS, "Operation successful.");
+    }
+
+    private Integer code;
+
+    private String msg;
+
+    private String detail;
+
+    private E data;
+
+    public Response(ResultCode code) {
+        this.code = code.code();
+        this.msg  = code.message();
+    }
+
+    public Response(ResultCode code, String detail) {
+        this.code = code.code();
+        this.msg  = code.message();
+        this.detail = detail;
+    }
+
+    public Response(ResultCode code, E data) {
+        this.code = code.code();
+        this.msg  = code.message();
+        this.data = data;
+    }
+
+}
