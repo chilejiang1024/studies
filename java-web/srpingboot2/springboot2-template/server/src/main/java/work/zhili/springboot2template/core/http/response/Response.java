@@ -37,6 +37,12 @@ public class Response<E> {
         this.msg  = code.message();
     }
 
+    public Response(E data) {
+        this.code = ResultCode.SUCCESS.code();
+        this.msg  = ResultCode.SUCCESS.message();
+        this.data = data;
+    }
+
     public Response(ResultCode code, String detail) {
         this.code = code.code();
         this.msg  = code.message();

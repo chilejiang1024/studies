@@ -31,8 +31,28 @@ public interface IUserService {
     void insert(User user);
 
     /**
-     * delete a user (make it invalid)
+     * delete a user (physically delete) <br>
+     * <b>DO NOT USE THIS unless you're pretty sure about it</b>
      * @param userId the user's id
      */
     void delete(String userId);
+
+    /**
+     * invalid a user
+     * @param userId the user's id
+     */
+    void invalid(String userId);
+
+    /**
+     * update a user
+     * @param user the user
+     */
+    void update(User user);
+
+    /**
+     * select a user
+     * @param userId the user's id
+     * @return
+     */
+    User select(String userId);
 }

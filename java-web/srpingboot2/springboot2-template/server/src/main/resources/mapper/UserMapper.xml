@@ -36,4 +36,39 @@
         where
             id = #{userId}
     </delete>
+
+    <update id="invalid">
+        update
+            test.user
+        set
+            vaild = 0
+        where
+            id = #{id}
+    </update>
+
+    <update id="update">
+        update
+            test.user
+        set
+            <if test="username != null"/>
+            username = #{username},
+            <if test="password != null"/>
+            password = #{password},
+            <if test="nickname != null"/>
+            nick_name = #{nickname},
+            <if test="gender != null"/>
+            gender = #{gender},
+            date_updated = now()
+        where
+            id = #{id}
+    </update>
+
+    <select id="select">
+        select
+            <include refid="BaseColumnList" />
+        from
+            test.user
+        where
+            id =#{userId}
+    </select>
 </mapper>

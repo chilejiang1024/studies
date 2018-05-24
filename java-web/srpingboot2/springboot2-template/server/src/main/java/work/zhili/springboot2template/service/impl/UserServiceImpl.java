@@ -49,4 +49,20 @@ public class UserServiceImpl implements IUserService {
     public void delete(String userId) {
         userMapper.delete(userId);
     }
+
+    @Override
+    @CacheEvict(cacheNames = "users", allEntries = true)
+    public void invalid(String userId) {
+        userMapper.invalid(userId);
+    }
+
+    @Override
+    public void update(User user) {
+        userMapper.update(user);
+    }
+
+    @Override
+    public User select(String userId) {
+        return userMapper.select(userId);
+    }
 }

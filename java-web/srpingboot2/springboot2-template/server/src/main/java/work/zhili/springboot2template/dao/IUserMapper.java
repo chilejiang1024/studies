@@ -33,7 +33,27 @@ public interface IUserMapper {
 
     /**
      * delete a user
+     * very careful to use this !!!
      * @param userId the user's id
      */
     void delete(String userId);
+
+    /**
+     * invalid a user
+     * @param userId the user's id
+     */
+    void invalid(String userId);
+
+    /**
+     * select a user
+     * @param userId the user's id
+     * @return
+     */
+    User select(String userId);
+
+    /**
+     * update a user
+     * @param user the user
+     */
+    void update(User user);
 }
