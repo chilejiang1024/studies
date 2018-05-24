@@ -1,6 +1,6 @@
-package work.zhili.springboot2template.handler;
+package work.zhili.springboot2template.core.handler;
 
-import com.google.gson.Gson;
+import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Title : work.zhili.springboot2template.handler <br>
+ * Title : work.zhili.springboot2template.core.handler <br>
  * Description :
  *  <p>
  *  <ul> 
@@ -26,12 +26,12 @@ import java.util.Map;
  * @date 2018/3/21 18:19
  */
 @Component
-public class ExceptionHandler implements HandlerExceptionResolver {
+public class GlobalExceptionHandler implements HandlerExceptionResolver {
 
     /**
      * the logger, get from slf4j
      */
-    private static Logger logger = LoggerFactory.getLogger(ExceptionHandler.class);
+    private static Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @Override
     public ModelAndView resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
@@ -48,7 +48,7 @@ public class ExceptionHandler implements HandlerExceptionResolver {
             responseMap.put("code", -1);
             responseMap.put("msg", "System is not available, please try it later.");
             responseMap.put("result", new HashMap<>(0));
-            String json = new Gson().toJson(responseMap);
+            String json = JSONObject.toJSONString(responseMap);
             // aimed to split the default error text
             json += "\n";
 
