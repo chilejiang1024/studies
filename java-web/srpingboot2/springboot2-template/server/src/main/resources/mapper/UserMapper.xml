@@ -63,12 +63,12 @@
             id = #{id}
     </update>
 
-    <select id="select">
+    <select id="select" resultMap="BaseResultMap">
         select
             <include refid="BaseColumnList" />
         from
             test.user
         where
-            id =#{userId}
+            id = #{userId}
     </select>
 </mapper>

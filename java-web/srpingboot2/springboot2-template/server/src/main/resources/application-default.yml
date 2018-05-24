@@ -1,10 +1,12 @@
+server:
+    port: 22222
 
 spring:
     profiles: default
     datasource:
-        url: jdbc:mysql://*****:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=yes&autoReconnect=true&autoReconnectForPools=true&useSSL=false
+        url: jdbc:mysql://zhili.work:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=yes&autoReconnect=true&autoReconnectForPools=true&useSSL=false
         username: root
-        password: *****
+        password: zhili.work
         driver-class-name: com.mysql.jdbc.Driver
         acquireIncrement: 5
         initialPoolSize: 5
@@ -20,6 +22,12 @@ spring:
         suffix: .html
         encoding: UTF-8
         mode: LEGACYHTML5
+    redis:
+        host: zhili.work
+        password: zhili
+        database: 1
 
-server:
-    port: 22222
+logging:
+    file: ./logs/server.log
+    level:
+        root: info

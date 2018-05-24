@@ -2,7 +2,6 @@ package work.zhili.springboot2template.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import work.zhili.springboot2template.dao.IUserMapper;
@@ -57,11 +56,13 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
+    @CacheEvict(cacheNames = "users", allEntries = true)
     public void update(User user) {
         userMapper.update(user);
     }
 
     @Override
+    @Cacheable(cacheNames = "users", key = "#userId")
     public User select(String userId) {
         return userMapper.select(userId);
     }
