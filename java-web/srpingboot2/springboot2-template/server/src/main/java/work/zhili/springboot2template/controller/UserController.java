@@ -20,7 +20,7 @@ import work.zhili.springboot2template.service.IUserService;
  * @date 2018/5/4 14:27
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/v1/users")
 public class UserController {
 
     private final IUserService userService;
@@ -30,12 +30,12 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/v1/users")
+    @GetMapping
     public Object queryAll() {
         return userService.queryAllForTesting();
     }
 
-    @PostMapping("/v1/users")
+    @PostMapping
     public Object add(@RequestParam String username, @RequestParam String password) {
         User user = new User();
         user.setId(UUIDUtils.getUuid());
@@ -45,19 +45,19 @@ public class UserController {
         return Response.SUCCESSFUL_MESSAGE;
     }
 
-    @DeleteMapping("/v1/users")
+    @DeleteMapping
     public Object delete(String userId) {
         userService.invalid(userId);
         return Response.SUCCESSFUL_MESSAGE;
     }
 
-    @PatchMapping("/v1/users")
+    @PatchMapping
     public Object update(@RequestBody User user) {
         userService.update(user);
         return Response.SUCCESSFUL_MESSAGE;
     }
 
-    @GetMapping("/v1/users/{userId}")
+    @GetMapping("/{userId}")
     public ResponseEntity<User> select(@PathVariable String userId) {
         User user = userService.select(userId);
         return ResponseEntity.ok(user);
