@@ -10,11 +10,8 @@ import work.zhili.springboot2template.service.IUserService;
 
 /**
  * Title : work.zhili.springboot2template.controller <br>
- * Description :
- *  <p>
- *  <ul> 
- *      <li>
- *  </ul>
+ * Description : <br>
+ *   RESTful API examples
  * @author chile
  * @version 1.0
  * @date 2018/5/4 14:27
