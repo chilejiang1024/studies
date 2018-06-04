@@ -1,17 +1,5 @@
 package work.zhili.springboot2template.core.aspect;
 
-/**
- * Title : work.zhili.springboot2template.core.aspect <br>
- * Description :
- *  <p>
- *  <ul> 
- *      <li>
- *  </ul>
- * @author chile
- * @version 1.0
- * @date 2018/5/24 17:24
- */
-
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -30,10 +18,13 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 
 /**
- * 请求参数、响应体统一日志打印
+ * Title : work.zhili.springboot2template.core.aspect <br>
+ * Description :
+ *   log the controller request
  *
- * @author zhili
- * @since 10/10/2017 9:54 AM
+ * @author chile
+ * @version 1.0
+ * @date 2018/5/24 17:24
  */
 @Aspect
 @Component
