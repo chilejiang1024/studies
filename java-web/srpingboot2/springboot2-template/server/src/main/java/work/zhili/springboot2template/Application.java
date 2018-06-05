@@ -17,12 +17,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2018/3/21 18:10
  */
 @SpringBootApplication
-public class Springboot2TemplateApplication {
+public class Application {
 
-    private static Logger logger = LoggerFactory.getLogger(Springboot2TemplateApplication.class);
+    private static Logger logger = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
-        SpringApplication.run(Springboot2TemplateApplication.class, args);
+        SpringApplication.run(Application.class, args);
         logger.info("application was started ...");
     }
 }
