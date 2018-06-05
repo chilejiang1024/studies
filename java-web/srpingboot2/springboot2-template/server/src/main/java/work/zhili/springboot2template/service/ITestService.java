@@ -12,7 +12,7 @@ package work.zhili.springboot2template.service;
  * @version 1.0
  * @date 2018/3/22 10:01
  */
-public interface IFirstService {
+public interface ITestService {
 
     /**
      * do nothing, but throw a {@link RuntimeException}

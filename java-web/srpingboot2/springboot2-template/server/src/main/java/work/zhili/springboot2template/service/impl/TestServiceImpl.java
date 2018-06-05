@@ -1,7 +1,7 @@
 package work.zhili.springboot2template.service.impl;
 
 import org.springframework.stereotype.Service;
-import work.zhili.springboot2template.service.IFirstService;
+import work.zhili.springboot2template.service.ITestService;
 
 /**
  * Title : work.zhili.springboot2template.service <br>
@@ -15,7 +15,7 @@ import work.zhili.springboot2template.service.IFirstService;
  * @date 2018/3/21 18:42
  */
 @Service
-public class FirstServiceImpl implements IFirstService {
+public class TestServiceImpl implements ITestService {
 
     @Override
     public void firstMethod() {
