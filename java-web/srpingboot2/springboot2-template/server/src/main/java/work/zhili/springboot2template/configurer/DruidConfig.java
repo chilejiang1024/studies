@@ -9,16 +9,14 @@ import org.springframework.core.env.Environment;
 /**
  * Title : work.zhili.springboot2template.configurer <br>
  * Description :
- *  <p>
- *  <ul>
- *      <li>
- *  </ul>
+ *   druid config
+ *
  * @author chile
  * @version 1.0
  * @date 2018-4-17 13:43:39
  */
 @Configuration
-public class DruidConfigurer {
+public class DruidConfig {
 
     private Environment env;
 

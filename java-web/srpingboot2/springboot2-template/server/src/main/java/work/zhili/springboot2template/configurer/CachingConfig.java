@@ -11,6 +11,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 /**
  * Title : work.zhili.springboot2template.configurer <br>
  * Description :
+ *   cache config
  *
  * @author chile
  * @version 1.0

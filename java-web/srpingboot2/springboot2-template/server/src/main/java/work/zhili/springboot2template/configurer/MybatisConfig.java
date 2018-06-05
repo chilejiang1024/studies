@@ -18,17 +18,15 @@ import static work.zhili.springboot2template.core.constant.BaseConstants.MODEL_P
 /**
  * Title : work.zhili.springboot2template.configurer <br>
  * Description :
- *  <p>
- *  <ul> 
- *      <li>
- *  </ul>
+ *   mybatis config (sql session factory)
+ *
  * @author chile
  * @version 1.0
  * @date 2018/4/17 13:51
  */
 @Configuration
 @MapperScan("work.zhili.springboot2template.dao")
-public class MybatisConfigurer {
+public class MybatisConfig {
 
     @Bean
     public SqlSessionFactory sqlSessionFactoryBean(DataSource dataSource) throws Exception {

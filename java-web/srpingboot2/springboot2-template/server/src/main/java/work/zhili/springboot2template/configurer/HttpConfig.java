@@ -11,16 +11,14 @@ import java.util.Collection;
 /**
  * Title : work.zhili.springboot2template.configurer <br>
  * Description :
- *  <p>
- *  <ul> 
- *      <li>
- *  </ul>
+ *   http message converter
+ *
  * @author chile
  * @version 1.0
  * @date 2018/5/24 14:53
  */
 // @Configuration
-public class HttpConfiguration {
+public class HttpConfig {
     @Bean
     public HttpMessageConverters customConverters() {
         Collection<HttpMessageConverter<?>> messageConverters = new ArrayList<>();

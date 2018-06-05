@@ -10,16 +10,14 @@ import java.io.IOException;
 /**
  * Title : work.zhili.springboot2template.configurer <br>
  * Description :
- *  <p>
- *  <ul>
- *      <li>
- *  </ul>
+ *   add filters
+ *
  * @author chile
  * @version 1.0
  * @date 2018-4-17 13:43:19
  */
 @Configuration
-public class WebConfigurer {
+public class WebConfig {
 
     @Bean
     public FilterRegistrationBean someFilterRegistration() {
