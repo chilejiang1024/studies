@@ -10,7 +10,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import work.zhili.springboot2template.Springboot2TemplateApplication;
+import work.zhili.springboot2template.Application;
 import work.zhili.springboot2template.service.IUserService;
 
 /**
@@ -26,7 +26,7 @@ import work.zhili.springboot2template.service.IUserService;
  */
 @RunWith(SpringRunner.class)
 @WebAppConfiguration
-@SpringBootTest(classes = Springboot2TemplateApplication.class)
+@SpringBootTest(classes = Application.class)
 public class UserControllerTest {
 
     @Autowired
