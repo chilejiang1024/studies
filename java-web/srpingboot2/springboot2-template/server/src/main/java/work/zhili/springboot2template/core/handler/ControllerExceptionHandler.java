@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * Title : work.zhili.springboot2template.core.handler <br>
  * Description :
- *
+ *   This will catch exceptions before {@link GlobalExceptionHandler}
  *
  * @author chile
  * @version 1.0
