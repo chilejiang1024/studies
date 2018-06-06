@@ -19,7 +19,7 @@ public class TestServiceImpl implements ITestService {
 
     @Override
     public void firstMethod() {
-        throw new RuntimeException();
+        throw new RuntimeException("Runtime exception for testing ...");
     }
 
 }
