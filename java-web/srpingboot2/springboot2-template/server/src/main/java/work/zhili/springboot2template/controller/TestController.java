@@ -35,7 +35,7 @@ public class TestController {
      */
     @GetMapping("/v1/first/get")
     @ResponseBody
-    public Object firstGet() {
+    Object firstGet() {
         firstService.firstMethod();
         return "haha";
     }
