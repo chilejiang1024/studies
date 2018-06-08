@@ -43,7 +43,7 @@ public class WaitAndNotify {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         MyRunnable r1 = new MyRunnable("A");
         MyRunnable r2 = new MyRunnable("B");
         MyRunnable r3 = new MyRunnable("C");
@@ -58,15 +58,14 @@ public class WaitAndNotify {
 
         t1.start();
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Thread.sleep(2000);
 
         synchronized (r1) {
             System.out.println("notify ... (@" + Thread.currentThread().getName() + ")");
             r1.notify();
+            // Once a thread is awakened it cannot exit the wait() call until the thread calling notify() has left its synchronized block.
+            System.out.println("after 2s ...");
+            Thread.sleep(2000);
         }
     }
 
