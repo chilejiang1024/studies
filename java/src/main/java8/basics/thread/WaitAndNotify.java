@@ -21,10 +21,10 @@ public class WaitAndNotify {
 
         @Override
         public void run() {
-            System.out.println("run ...");
+            System.out.println("run ... (@" + Thread.currentThread().getName() + ")");
             synchronized (this) {
                 try {
-                    System.out.println("wait ...");
+                    System.out.println("wait ... (@" + Thread.currentThread().getName() + ")");
                     this.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -65,7 +65,7 @@ public class WaitAndNotify {
         }
 
         synchronized (r1) {
-            System.out.println("notify ...");
+            System.out.println("notify ... (@" + Thread.currentThread().getName() + ")");
             r1.notify();
         }
     }
