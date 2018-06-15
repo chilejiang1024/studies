@@ -86,4 +86,9 @@ public class Response<E> {
     public void setData(E data) {
         this.data = data;
     }
+
+    @Override
+    public String toString() {
+        return "{code: " + getCode() + ", msg: " + getMsg() + ", detail: " + getDetail() +", data: " + getData() + "}";
+    }
 }
