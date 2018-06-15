@@ -48,11 +48,11 @@ public class RestControllerLogAspect {
             return joinPoint.proceed();
         }
 
+        // get the servlet request
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 
         User loginUser = new User();
-
-        String ip = request.getHeader("X-Forwarded-For");
+        String ip = request.getRemoteHost();
         String methodName = this.getMethodName(joinPoint);
         String params = this.getParamsJson(joinPoint);
         String requester = loginUser == null ? "unknown" : String.valueOf(loginUser.getId());
@@ -61,12 +61,24 @@ public class RestControllerLogAspect {
         String apiVersion = "";
         String userAgent = request.getHeader("user-agent");
 
-        logger.info("Request start, requester [{}], method [{}], params [{}], IP [{}], callSource [{}], appVersion [{}], apiVersion [{}], userAgent [{}]",
-                    requester, methodName, params, ip, callSource, appVersion, apiVersion, userAgent);
+        logger.info("[Request start] --- requester: " + requester
+                            + ", method: " + methodName
+                            + ", params: " + params
+                            + ", IP: " + ip
+                            + ", callSource: " + callSource
+                            + ", appVersion: " + appVersion
+                            + ", apiVersion: " + apiVersion
+                            + ", userAgent: " + userAgent);
+
         long start = System.currentTimeMillis();
+        // proceed the controller method
         Object result = joinPoint.proceed();
-        logger.info("Request end, requester [{}], method [{}], params[{}], response is [{}], cost [{}] millis ",
-                    requester, methodName, params, result, System.currentTimeMillis() - start);
+        logger.info("[Request   end] --- requester: " + requester
+                            + ", method: " + methodName
+                            + ", params: " + params
+                            + ", response: " + result
+                            + ", cost "+ (System.currentTimeMillis() - start) +" millis ");
+
         return result;
     }
 
