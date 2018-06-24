@@ -1,6 +1,6 @@
 package work.zhili.springboot2template.core.status;
 
-import com.google.gson.JsonObject;
+import com.alibaba.fastjson.JSONObject;
 
 /**
  * Title : work.zhili.springboot2template.core.status <br>
@@ -20,9 +20,9 @@ public class ReturnMessage {
     }
 
     private static String successfulMessage() {
-        JsonObject msg = new JsonObject();
-        msg.addProperty("code", 1);
-        msg.addProperty("msg", "Operation successful.");
+        JSONObject msg = new JSONObject();
+        msg.put("code", 1);
+        msg.put("msg", "Operation successful.");
         return msg.toString();
     }
 }
