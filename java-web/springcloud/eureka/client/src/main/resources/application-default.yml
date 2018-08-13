@@ -1,12 +1,12 @@
+spring:
+  application:
+    name: compute-service
 
 server:
-  port: 50001
-  servlet:
-    context-path: /eureka
+  port: 50002
 
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
     serviceUrl:
       defaultZone: http://localhost:${server.port}/eureka/
+

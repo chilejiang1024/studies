@@ -2,7 +2,7 @@ package work.zhili.springcloud.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * Title : work.zhili.springcloud.eureka.EurekaApplication <br>
@@ -15,7 +15,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * @date 2018-8-13 10:43:32
  */
 @SpringBootApplication
-@EnableEurekaServer
+@EnableDiscoveryClient
 public class EurekaApplication {
 
     public static void main(String[] args) {
