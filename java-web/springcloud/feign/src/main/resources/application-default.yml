@@ -1,4 +1,8 @@
 
+spring:
+  application:
+    name: feign-consumer
+
 server:
   port: 50010
 
