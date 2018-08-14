@@ -3,6 +3,7 @@ package work.zhili.springcloud.eureka.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import work.zhili.springcloud.eureka.service.ComputeClient;
 
 /**
@@ -15,6 +16,7 @@ import work.zhili.springcloud.eureka.service.ComputeClient;
  * @version 1.0
  * @date 2018/8/14 15:56
  */
+@RestController
 public class ConsumerController {
 
     @Autowired
