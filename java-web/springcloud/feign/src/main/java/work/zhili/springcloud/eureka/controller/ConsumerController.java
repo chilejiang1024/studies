@@ -24,12 +24,12 @@ public class ConsumerController {
     ComputeClient computeClient;
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Integer add() {
+    public Object add() {
         return computeClient.add(10, 20);
     }
 
     @RequestMapping(value = "/divide", method = RequestMethod.GET)
-    public Integer divide(@RequestParam Integer a, @RequestParam Integer b) {
+    public Object divide(@RequestParam Integer a, @RequestParam Integer b) {
         return computeClient.divide(a, b);
     }
 }

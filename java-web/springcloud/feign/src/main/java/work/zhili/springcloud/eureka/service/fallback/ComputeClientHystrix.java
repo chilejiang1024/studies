@@ -17,12 +17,12 @@ import work.zhili.springcloud.eureka.service.ComputeClient;
 public class ComputeClientHystrix implements ComputeClient {
 
     @Override
-    public Integer add(Integer a, Integer b) {
+    public Object add(Integer a, Integer b) {
         return Integer.MIN_VALUE;
     }
 
     @Override
-    public Integer divide(Integer a, Integer b) {
+    public Object divide(Integer a, Integer b) {
         return 0;
     }
 }

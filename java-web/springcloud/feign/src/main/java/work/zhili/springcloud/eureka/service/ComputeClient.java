@@ -20,8 +20,8 @@ import work.zhili.springcloud.eureka.service.fallback.ComputeClientHystrix;
 public interface ComputeClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/add")
-    Integer add(@RequestParam(value = "a") Integer a, @RequestParam(value = "b") Integer b);
+    Object add(@RequestParam(value = "a") Integer a, @RequestParam(value = "b") Integer b);
 
     @RequestMapping(method = RequestMethod.GET, value = "/divide")
-    Integer divide(@RequestParam(value = "a") Integer a, @RequestParam(value = "b") Integer b);
+    Object divide(@RequestParam(value = "a") Integer a, @RequestParam(value = "b") Integer b);
 }
