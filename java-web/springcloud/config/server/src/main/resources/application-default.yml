@@ -1,0 +1,19 @@
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/chilejiang1024/spring-cloud-config-server-test
+          search-paths: /
+          username: chilejiang1024
+          password: Spy007123..
+
+server:
+  port: 52000
+
+
+
+
