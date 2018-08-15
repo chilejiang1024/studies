@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: configclient
+  cloud:
+    config:
+      profile: dev
+      label: master
+      uri: http://localhost:52000/
+
+server:
+  port: 52001
