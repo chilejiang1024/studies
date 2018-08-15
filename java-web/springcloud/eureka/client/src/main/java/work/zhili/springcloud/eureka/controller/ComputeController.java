@@ -40,4 +40,15 @@ public class ComputeController {
         return r;
     }
 
+    @RequestMapping(value = "/divide" ,method = RequestMethod.GET)
+    public Integer divide(@RequestParam Integer a, @RequestParam Integer b) {
+        ServiceInstance instance = client.getInstances(client.getServices().get(0)).get(0);
+        if (b == 0) {
+            throw new RuntimeException("b cannot be 0");
+        }
+        Integer r = a / b;
+        logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
+        return r;
+    }
+
 }
