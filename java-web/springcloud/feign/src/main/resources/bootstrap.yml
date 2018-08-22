@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: feign-consumer
+  cloud:
+    config:
+      profile: dev
+      label: master
+      uri: http://localhost:52000/
