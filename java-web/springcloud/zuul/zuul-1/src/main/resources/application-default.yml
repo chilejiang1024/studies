@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: api-gateway
+
+server:
+  port: 50020
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:50001/eureka/
+
