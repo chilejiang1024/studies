@@ -106,18 +106,44 @@ public class Test {
     }
 
     private void test8() {
-        new A();
+        new A("1");
         class A {
 
         }
     }
 
-    class A {
+    private static class A {
+        String name;
 
+        A(String name) {
+            this.name = name;
+        }
     }
 
-    private static void test9() {
+    private static void test9(List<A> l) {
+        l.get(0).name = "1";
+    }
 
+    private static void test10() {
+        List<A> list = new ArrayList<>();
+        list.add(new A("1"));
+        list.add(new A("1"));
+        list.add(new A("1"));
+        list.add(new A("1"));
+        list.add(new A("1"));
+
+        List<A> subList = list.subList(2, 3);
+        subList.forEach(a -> a.name = "2");
+        subList.isEmpty();
+
+        list.forEach(a -> System.out.println(a.name));
+    }
+
+    private static void test11() {
+        System.out.println(-8 >> 4);
+        System.out.println( 4 >>> 2);
+        System.out.println(0b10000000000000000000000000000001);
+        System.out.println(Integer.toBinaryString(-1));
     }
 
     /**
@@ -125,13 +151,9 @@ public class Test {
      */
     public static void main(String[] args) {
 
-        new Test().test7();
+        test11();
 
-    }
-}
 
-class A {
-    public static void main(String[] args) {
 
     }
 }
