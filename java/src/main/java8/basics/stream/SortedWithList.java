@@ -1,4 +1,4 @@
-package main.java8.basics.stream.sorted;
+package main.java8.basics.stream;
 
 import java.util.ArrayList;
 import java.util.Comparator;
