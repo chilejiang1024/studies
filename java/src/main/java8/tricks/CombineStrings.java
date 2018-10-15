@@ -11,7 +11,7 @@ import java.util.StringJoiner;
  * @version 1.0
  * @date 2018/10/15 11:00
  */
-public class CombinStrings {
+public class CombineStrings {
 
     public static void main(String[] args) {
         StringJoiner joiner = new StringJoiner(",");
