@@ -1,5 +1,7 @@
 package main.algorithm.a.jian.zhi.offer;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 
 import static java.lang.System.out;
@@ -51,6 +53,22 @@ public class DuplicateNumber {
         int t = a[i1];
         a[i1] = a[i2];
         a[i2] = t;
+    }
+
+    @Test
+    public void test() {
+        int[][] a = {{2, 1, 6, 4, 3, 1, 0, 7},
+                     {3, 5, 6, 4, 3, 1, 0, 7},
+                     {2, 5, 6, 4, 3, 1, 1, 7},
+                     {2, 1, 6, 4, 1, 1, 0, 7}};
+        int z;
+        int[] zz = {1, 3, 1, 1};
+
+        for (int i = 0; i < a.length; i++) {
+            z = findOneDuplicateNumber(a[i]);
+            assert z == zz[i];
+        }
+
     }
 
 }
