@@ -90,6 +90,12 @@
             <version>${org.springframework.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+
         <!-- 2 Servlet web (jstl taglib servlet) -->
         <dependency>
             <groupId>javax.servlet.jsp.jstl</groupId>
