@@ -1,9 +1,19 @@
 package main;
 
+import jdk.nashorn.internal.runtime.regexp.JoniRegExp;
+import org.apache.commons.httpclient.HttpClient;
+import sun.misc.BASE64Decoder;
+
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.lang.System.clearProperty;
 import static java.lang.System.out;
 
 /**
@@ -146,14 +156,67 @@ public class Test {
         System.out.println(Integer.toBinaryString(-1));
     }
 
+    private static void test12() throws Exception {
+        System.out.println(Class.forName("[[[[[[[J").getName());
+    }
+
+    @org.junit.Test
+    public void test13() throws Exception {
+        URL url = new URL("http://natas15.natas.labs.overthewire.org/index.php");
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("POST");
+        conn.setRequestProperty("Authorization", "Basic bmF0YXMxNTpBd1dqMHc1Y3Z4clppT05nWjlKNXN0TlZrbXhkazM5Sg==");
+        conn.setDoOutput(true);
+
+    }
+
+    @org.junit.Test
+    public void test14() {
+        int a = 1;
+        switch (a) {
+            case 0:
+                System.out.println("a = 0");
+                break;
+            case 1:
+                System.out.println("a = 1");
+            case 2:
+                System.out.println("a = 2");
+        }
+
+    }
+
+    @org.junit.Test
+    public void test15() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3);
+
+        int[] factor = new int[] { 2 };
+        Stream<Integer> stream = numbers.stream()
+                                        .peek(e -> System.out.println(factor[0]))
+                                        .map(e -> e * factor[0]);
+
+        factor[0] = 0;
+
+        // stream.forEach(System.out::println);
+        System.out.println(factor[0]);
+    }
+
     /**
      * the main method
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        test11();
-
-
+        System.out.println(int.class);
 
     }
+
+
+
+
+
+
+
+
+
+
+
 }
