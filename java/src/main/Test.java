@@ -10,6 +10,10 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -203,8 +207,9 @@ public class Test {
     @org.junit.Test
     public void test16() {
         Runnable runnable = () -> System.out.println("runnable");
-        Thread t = new Thread(runnable);
-        t.start();
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        executorService.submit(runnable);
+        executorService.shutdown();
     }
 
     /**
