@@ -200,6 +200,13 @@ public class Test {
         System.out.println(factor[0]);
     }
 
+    @org.junit.Test
+    public void test16() {
+        Runnable runnable = () -> System.out.println("runnable");
+        Thread t = new Thread(runnable);
+        t.start();
+    }
+
     /**
      * the main method
      */
