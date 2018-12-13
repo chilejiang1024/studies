@@ -212,6 +212,14 @@ public class Test {
         executorService.shutdown();
     }
 
+    @org.junit.Test
+    public void test17() {
+        List<Integer> list = Arrays.asList(1, 2, 3);
+        // java.lang.UnsupportedOperationException
+        list.add(4);
+        list.forEach(System.out::println);
+    }
+
     /**
      * the main method
      */
