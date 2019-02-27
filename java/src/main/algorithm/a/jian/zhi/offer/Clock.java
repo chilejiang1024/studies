@@ -16,7 +16,7 @@ public class Clock {
 
     public static void main(String[] args) throws Exception {
 
-        int[][] matrix = new int[7][200];
+        int[][] matrix = new int[7][25];
 
         int[][] nn = { { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 } };
         int[][] ns = { { 0, 0 }, { 0, 0 }, { 0, 3 }, { 0, 0 }, { 0, 3 }, { 0, 0 }, { 0, 0 } };
