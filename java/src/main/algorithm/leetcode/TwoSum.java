@@ -1,17 +1,13 @@
 package main.algorithm.leetcode;
 
-import jdk.internal.dynalink.linker.LinkerServices;
-
-import java.lang.reflect.MalformedParameterizedTypeException;
-import java.time.temporal.Temporal;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Title : main.algorithm.leetcode <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
- *
- *
+ * <p> Runtime: 9 ms, faster than 46.23% of Java online submissions for Two Sum.
+ * <p> Memory Usage: 38.4 MB, less than 58.02% of Java online submissions for Two Sum.
  * @author chile
  * @version 1.0
  * @date 2019/3/14 17:29
