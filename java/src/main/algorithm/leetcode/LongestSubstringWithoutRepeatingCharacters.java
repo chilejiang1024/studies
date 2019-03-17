@@ -8,7 +8,8 @@ import java.util.Map;
 /**
  * Title : main.algorithm.leetcode <br>
  * Description :
- *
+ * <p> Runtime: 23 ms, faster than 75.70% of Java online submissions for Longest Substring Without Repeating Characters.
+ * <p> Memory Usage: 39.3 MB, less than 20.94% of Java online submissions for Longest Substring Without Repeating Characters.
  * @author chile
  * @version 1.0
  * @date 2019/3/15 15:29
