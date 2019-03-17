@@ -1,23 +1,13 @@
 package main;
 
-import jdk.nashorn.internal.runtime.regexp.JoniRegExp;
-import org.apache.commons.httpclient.HttpClient;
-import sun.misc.BASE64Decoder;
-
-import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static java.lang.System.clearProperty;
 import static java.lang.System.out;
 
 /**

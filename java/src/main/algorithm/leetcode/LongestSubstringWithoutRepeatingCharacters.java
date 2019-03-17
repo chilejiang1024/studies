@@ -2,14 +2,12 @@ package main.algorithm.leetcode;
 
 import org.junit.Test;
 
-import javax.xml.bind.annotation.adapters.HexBinaryAdapter;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Title : main.algorithm.leetcode <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
- *
  *
  * @author chile
  * @version 1.0
@@ -23,14 +21,15 @@ public class LongestSubstringWithoutRepeatingCharacters {
             int h = 0, t = 0, ans = 0;
             Map<Character, Integer> map = new HashMap<>();
             for (int i = 0, l = s.length(); i < l; i++) {
-                if (map.containsKey(s.charAt(i))) {
-                    ans = Math.max(ans, i - h);
-                    h = Math.max(h, map.get(s.charAt(i)) + 1);
-                    map.put(s.charAt(i), i);
-                } else {
-                    map.put(s.charAt(i), i);
-                    ans = Math.max(ans, i - h + 1);
+                char c = s.charAt(i);
+                if (map.containsKey(c)) {
+                    if (map.get(c) >= h) {
+                        ans = Math.max(ans, i - h);
+                        h = map.get(c) + 1;
+                    }
                 }
+                ans = Math.max(ans, i - h + 1);
+                map.put(c, i);
             }
 
             return ans;
@@ -91,4 +90,12 @@ public class LongestSubstringWithoutRepeatingCharacters {
         int n = new Solution().lengthOfLongestSubstring(s);
         assert n == 3;
     }
+
+    @Test
+    public void test8() {
+        String s = "tmmzuxt";
+        int n = new Solution().lengthOfLongestSubstring(s);
+        assert n == 5;
+    }
+
 }

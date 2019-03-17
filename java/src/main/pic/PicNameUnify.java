@@ -1,6 +1,7 @@
 package main.pic;
 
-import com.aspose.words.IFieldMergingCallback;
+import com.drew.imaging.ImageMetadataReader;
+import com.drew.metadata.Metadata;
 import org.junit.Test;
 
 import java.io.File;
@@ -94,6 +95,19 @@ public class PicNameUnify {
         BasicFileAttributeView basicView = Files. getFileAttributeView(Paths.get(filePath), BasicFileAttributeView.class);
         BasicFileAttributes basicFileAttributes = basicView.readAttributes();
         System.out.println(basicFileAttributes.lastAccessTime());
+    }
+
+    @Test
+    public void redo() throws Exception {
+        String imagePath = "C:\\Users\\Administrator\\Desktop\\rose-blue-flower-rose-blooms-67636.jpeg";
+        File image = new File(imagePath);
+        Metadata metadata = ImageMetadataReader.readMetadata(image);
+        metadata.getDirectories().forEach(d -> d.getTags().forEach(t -> {
+            System.out.println(t.getTagName());
+            System.out.println(t.getDescription());
+        }));
+
+
     }
 
 }

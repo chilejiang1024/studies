@@ -89,6 +89,11 @@
             <artifactId>spring-test</artifactId>
             <version>${org.springframework.version}</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
@@ -227,6 +232,13 @@
             <!--<artifactId>aspose-words</artifactId>-->
             <!--<version>16.11.0</version>-->
         <!--</dependency>-->
+
+        <!-- 读取图片文件原信息 -->
+        <dependency>
+            <groupId>com.drewnoakes</groupId>
+            <artifactId>metadata-extractor</artifactId>
+            <version>2.11.0</version>
+        </dependency>
 
     </dependencies>
 
