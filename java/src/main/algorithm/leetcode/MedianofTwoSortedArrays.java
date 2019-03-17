@@ -33,7 +33,7 @@ public class MedianofTwoSortedArrays {
                 return (nums1[p1] + nums1[p2]) / 2.0d;
             }
 
-            int[] all = new int[l1 + l2];
+            int[] all = new int[p2 + 1];
 
             int i = 0, j = 0;
             while (i + j <= p2) {
