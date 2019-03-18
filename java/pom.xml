@@ -7,6 +7,21 @@
     <version>1.0.0-SNAPSHOT</version> <!-- 版本号 -->
     <name>chile's codes</name> <!-- 显示名字 -->
 
+    <!-- aliyun maven nexus -->
+    <repositories>
+        <repository>
+            <id>maven-ali</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public//</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <!-- 配置可变版本号,也就是常说的版本管理 （Spring、SpringMvc、Mybatis、Gson、Druid） -->
     <!-- 要针对某个依赖进行升级的时候只需要更改下面对应的版本号 -->
