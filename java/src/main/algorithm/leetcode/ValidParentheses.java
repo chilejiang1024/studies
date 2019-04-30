@@ -6,7 +6,6 @@ import java.util.ArrayDeque;
 
 /**
  * Title : main.algorithm.leetcode <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
  *   <p> Runtime: 1 ms, faster than 99.29% of Java online submissions for Valid Parentheses.
  *   <p> Memory Usage: 35.4 MB, less than 37.18% of Java online submissions for Valid Parentheses.

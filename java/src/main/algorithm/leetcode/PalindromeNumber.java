@@ -4,7 +4,6 @@ import org.junit.Test;
 
 /**
  * Title : main.algorithm.leetcode <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
  *   <p> Runtime: 6 ms, faster than 100.00% of Java online submissions for Palindrome Number.
  *   <p> Memory Usage: 35 MB, less than 100.00% of Java online submissions for Palindrome Number.

@@ -4,7 +4,6 @@ import org.junit.Test;
 
 /**
  * Title : main.algorithm.leetcode <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
  *  <p> Runtime: 0 ms, faster than 100.00% of Java online submissions for Search Insert Position.
  *  <p> Memory Usage: 39.6 MB, less than 7.49% of Java online submissions for Search Insert Position.

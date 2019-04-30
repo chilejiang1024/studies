@@ -7,7 +7,6 @@ import java.util.Map;
 
 /**
  * Title : main.algorithm.leetcode <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
  *   <p> Runtime: 1 ms, faster than 99.42% of Java online submissions for Count and Say.
  *   <p> Memory Usage: 35.6 MB, less than 99.84% of Java online submissions for Count and Say.
