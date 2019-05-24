@@ -1,5 +1,7 @@
 package main.algorithm.leetcode;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -93,7 +95,8 @@ public class TwoSum {
 
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test1() {
         int[] array = { 2, 7, 11, 15 };
         for (int i : Solution.twoSum2(array, 9)) {
             System.out.println(i);

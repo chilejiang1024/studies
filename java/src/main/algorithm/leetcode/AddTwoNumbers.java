@@ -1,5 +1,7 @@
 package main.algorithm.leetcode;
 
+import org.junit.Test;
+
 /**
  * Title : main.algorithm.leetcode <br>
  * Description :
@@ -44,7 +46,8 @@ public class AddTwoNumbers {
 
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test1() {
         ListNode a1 = new ListNode(2);
         ListNode a2 = new ListNode(4);
         ListNode a3 = new ListNode(3);
