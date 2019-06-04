@@ -4,8 +4,16 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:50001/eureka/
+      # defaultZone: http://localhost:50001/eureka/
+      defaultZone: http://dev.zhili.work:50001/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
 
 feign:
   hystrix:
     enabled: true
+
+logging:
+  level:
+    work.zhili.springcloud.eureka.service: debug
