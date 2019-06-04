@@ -6,7 +6,6 @@ import java.io.Serializable;
 
 /**
  * Title : com.thunisoft.assistant.core.http.response <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description : <br>
  *  - 传说中的 api 返回值构造器
  *  -

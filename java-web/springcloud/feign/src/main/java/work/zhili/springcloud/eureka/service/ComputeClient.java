@@ -8,7 +8,6 @@ import work.zhili.springcloud.eureka.service.fallback.ComputeClientHystrix;
 
 /**
  * Title : work.zhili.springcloud.eureka.service <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
  *
  *

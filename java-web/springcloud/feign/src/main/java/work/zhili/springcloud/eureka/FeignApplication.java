@@ -7,7 +7,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * Title : work.zhili.springcloud.eureka.EurekaApplication <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description : <br>
  *   eureka test
  *
@@ -23,4 +22,5 @@ public class FeignApplication {
     public static void main(String[] args) {
         SpringApplication.run(FeignApplication.class, args);
     }
+
 }

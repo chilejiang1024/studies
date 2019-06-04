@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * Title : work.zhili.springcloud.eureka.config <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
  *
  *
