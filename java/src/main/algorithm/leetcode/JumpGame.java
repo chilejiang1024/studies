@@ -4,7 +4,6 @@ import org.junit.Test;
 
 /**
  * Title : main.algorithm.leetcode <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
  *   <p> Runtime: 1 ms, faster than 99.80% of Java online submissions for Jump Game.
  *   <p> Memory Usage: 39.2 MB, less than 91.81% of Java online submissions for Jump Game.
