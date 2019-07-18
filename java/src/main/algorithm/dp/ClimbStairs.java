@@ -1,11 +1,9 @@
 package main.algorithm.dp;
 
 import java.util.HashMap;
-import java.util.Objects;
 
 /**
  * Title : main.algorithm.dp
- * Company : 北京华宇元典信息服务有限公司
  * Description :
  *  <p> 找出爬上n阶台阶, 一共有多少种上法 (一次只能上一个或者两个台阶)
  *  <p> 动态规划
