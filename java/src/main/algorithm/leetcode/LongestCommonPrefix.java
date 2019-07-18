@@ -4,7 +4,6 @@ import org.junit.Test;
 
 /**
  * Title : main.algorithm.leetcode <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
  *  <a href="https://leetcode.com/problems/longest-common-prefix">problem</a>
  *
