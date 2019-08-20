@@ -97,7 +97,7 @@ public class TwoSum {
 
     @Test
     public void test1() {
-        int[] array = { 2, 7, 11, 15 };
+        int[] array = { 2, 7, 11, 15, 0, 4, 8 };
         for (int i : Solution.twoSum2(array, 9)) {
             System.out.println(i);
         }
