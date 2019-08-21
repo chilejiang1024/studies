@@ -1,5 +1,7 @@
 package main.algorithm.leetcode;
 
+import main.algorithm.leetcode.structure.ListNode;
+import main.algorithm.leetcode.util.LCUtil;
 import org.junit.Test;
 
 /**
@@ -12,17 +14,6 @@ import org.junit.Test;
  * @date 2019/8/19 17:12
  */
 public class RotateList {
-
-    public class ListNode {
-
-        int val;
-
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     class Solution {
 
@@ -67,18 +58,7 @@ public class RotateList {
 
     @Test
     public void test1() {
-        ListNode n1 = new ListNode(1);
-        ListNode n2 = new ListNode(2);
-        ListNode n3 = new ListNode(3);
-        ListNode n4 = new ListNode(4);
-        ListNode n5 = new ListNode(5);
-
-        n1.next = n2;
-        n2.next = n3;
-        n3.next = n4;
-        n4.next = n5;
-
-        ListNode result = new Solution().rotateRight(n1, 2);
+        ListNode result = new Solution().rotateRight(LCUtil.createList5(), 2);
         while (result != null) {
             System.out.println(result.val);
             result = result.next;
