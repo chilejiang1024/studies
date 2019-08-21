@@ -1,5 +1,7 @@
 package main.algorithm.leetcode;
 
+import main.algorithm.leetcode.structure.ListNode;
+import main.algorithm.leetcode.util.LCUtil;
 import org.junit.Test;
 
 /**
@@ -12,17 +14,6 @@ import org.junit.Test;
  * @date 2019/8/21 11:21
  */
 public class RemoveNthFromEnd {
-
-    public class ListNode {
-
-        int val;
-
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     class Solution {
         public ListNode removeNthFromEnd(ListNode head, int n) {
@@ -56,27 +47,12 @@ public class RemoveNthFromEnd {
         }
     }
 
-    private ListNode createList() {
-        ListNode n1 = new ListNode(1);
-        ListNode n2 = new ListNode(2);
-        ListNode n3 = new ListNode(3);
-        ListNode n4 = new ListNode(4);
-        ListNode n5 = new ListNode(5);
-
-        n1.next = n2;
-        n2.next = n3;
-        n3.next = n4;
-        n4.next = n5;
-
-        return n1;
-    }
-
     @Test
     public void test1() {
 
         for (int i = 1; i < 6; i++) {
             System.out.print("nth is: " + i + ", result: ");
-            ListNode head = new Solution().removeNthFromEnd(createList(), i);
+            ListNode head = new Solution().removeNthFromEnd(LCUtil.createList5(), i);
             while (head != null) {
                 System.out.print(head.val);
                 head = head.next;
