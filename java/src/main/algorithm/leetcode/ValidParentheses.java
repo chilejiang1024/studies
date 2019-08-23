@@ -65,6 +65,8 @@ public class ValidParentheses {
     @Test
     public void test1() {
         assert new Solution().isValid("(){}[]") == true;
+        assert new Solution().isValid("{()[]}") == true;
+        assert new Solution().isValid("{[][]}") == true;
     }
 
 }
