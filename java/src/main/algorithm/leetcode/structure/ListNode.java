@@ -2,7 +2,6 @@ package main.algorithm.leetcode.structure;
 
 /**
  * Title : main.algorithm.leetcode.structure <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
  *
  *
