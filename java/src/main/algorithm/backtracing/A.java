@@ -18,12 +18,12 @@ public class A {
     private static List<String> calculate(int[] nums) {
         List<String> result = new ArrayList<>();
 
-        backtrace(nums, result, 0, "");
+        backtrack(nums, result, 0, "");
 
         return result;
     }
 
-    private static void backtrace(int[] nums, List<String> result, int index, String builder) {
+    private static void backtrack(int[] nums, List<String> result, int index, String builder) {
         if (index == nums.length) {
             result.add(builder);
             return;
@@ -31,7 +31,7 @@ public class A {
 
         for (int num : nums) {
             if (!builder.contains(String.valueOf(num))) {
-                backtrace(nums, result, index + 1, builder + num);
+                backtrack(nums, result, index + 1, builder + num);
             }
         }
     }
