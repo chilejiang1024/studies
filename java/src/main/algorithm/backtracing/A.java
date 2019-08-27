@@ -15,35 +15,31 @@ import java.util.List;
  */
 public class A {
 
-    private static List<List<Integer>> calculate(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
+    private static List<String> calculate(int[] nums) {
+        List<String> result = new ArrayList<>();
 
-        backtrace(nums, result, 0, new ArrayList<>());
+        backtrace(nums, result, 0, "");
 
         return result;
     }
 
-    private static void backtrace(int[] nums, List<List<Integer>> result, int index, List<Integer> builder) {
+    private static void backtrace(int[] nums, List<String> result, int index, String builder) {
         if (index == nums.length) {
             result.add(builder);
+            return;
         }
 
-        for (int i = 0; i < nums.length; i++) {
-            if (!builder.contains(nums[i])) {
-                builder.add(nums[i]);
-                backtrace(nums, result, index + 1, new ArrayList<>(builder));
+        for (int num : nums) {
+            if (!builder.contains(String.valueOf(num))) {
+                backtrace(nums, result, index + 1, builder + num);
             }
         }
-
     }
 
     public static void main(String[] args) {
         int[] nums = { 1, 2, 3, 4, 5 };
-        List<List<Integer>> result = calculate(nums);
-        result.forEach(l -> {
-            l.forEach(System.out::print);
-            System.out.println();
-        });
+        List<String> result = calculate(nums);
+        result.forEach(System.out::println);
     }
 
 }
