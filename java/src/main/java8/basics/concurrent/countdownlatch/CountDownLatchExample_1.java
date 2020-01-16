@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Title : main.java8.basics.concurrent.countdownlatch <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
  *
  *
