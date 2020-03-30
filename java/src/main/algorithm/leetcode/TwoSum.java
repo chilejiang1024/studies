@@ -103,4 +103,13 @@ public class TwoSum {
         }
     }
 
+    @Test
+    public void test2() {
+        int[] array = { 1, 2 };
+        Solution.quickSort(array, 0, array.length - 1);
+        for (int i : array) {
+            System.out.println(i);
+        }
+    }
+
 }
