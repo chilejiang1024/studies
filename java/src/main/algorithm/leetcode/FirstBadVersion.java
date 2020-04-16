@@ -30,14 +30,14 @@ public class FirstBadVersion {
             if (isBadVersion(1)) {
                 return 1;
             }
-            long p = n / 2, i = 0, j = n;
+            long p = n >>> 1, i = 0, j = n;
             while (i < j) {
                 if (isBadVersion((int) p)) {
                     j = p;
                 } else {
                     i = p + 1;
                 }
-                p = (i + j) / 2;
+                p = (i + j) >>> 1;
             }
             return (int) i;
         }
