@@ -6,7 +6,6 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.function.Predicate;
 
 /**
  * Title : main.java8.basics.stream <br>
@@ -23,6 +22,10 @@ public class PredicateOps {
 
         private int color;
         private int weight;
+
+        public Apple() {
+            super();
+        }
 
         public Apple(int color, int weight) {
             this.color = color;
@@ -52,6 +55,43 @@ public class PredicateOps {
 
     }
 
+    private static class ChinaApple extends Apple {
+        private int country;
+
+        public ChinaApple() {
+            super();
+        }
+
+        public ChinaApple(int color, int weight, int country) {
+            super(color, weight);
+            this.country = country;
+        }
+
+        public int getCountry() {
+            return country;
+        }
+
+        public void setCountry(int country) {
+            this.country = country;
+        }
+
+        @Override
+        public String toString() {
+            return super.toString() + ", country: " + this.country;
+        }
+    }
+
+    private interface MyPredicate<E> {
+
+        /**
+         * accept this apple or not
+         * @param apple
+         * @return
+         */
+        boolean accept(E apple);
+
+    }
+
     private static List<Apple> APPLES = new ArrayList<>();
 
     static {
@@ -60,16 +100,18 @@ public class PredicateOps {
         APPLES.add(new Apple(3, 30));
         APPLES.add(new Apple(4, 40));
         APPLES.add(new Apple(5, 50));
+        APPLES.add(new ChinaApple(5, 50, 1001));
+        APPLES.add(new ChinaApple(5, 50, 1001));
     }
 
-    private List<Apple> filterApples(List<Apple> apples, Predicate<Apple> predicate) {
+    private List<Apple> filterApples(List<Apple> apples, MyPredicate<Apple> predicate) {
         Objects.requireNonNull(predicate);
         List<Apple> result = new ArrayList<>();
         if (CollectionUtils.isEmpty(apples)) {
             return result;
         }
         for (Apple apple : apples) {
-            if (predicate.test(apple)) {
+            if (predicate.accept(apple)) {
                 result.add(apple);
             }
         }
@@ -85,6 +127,12 @@ public class PredicateOps {
     @Test
     public void test2() {
         filterApples(APPLES, (apple) -> apple.weight > 20)
+                .forEach(apple -> System.out.println(apple.toString()));
+    }
+
+    @Test
+    public void test3() {
+        filterApples(APPLES, (apple) -> apple instanceof ChinaApple)
                 .forEach(apple -> System.out.println(apple.toString()));
     }
 
