@@ -27,12 +27,28 @@ public class LCUtil {
         return head;
     }
 
+    public static void outputList(ListNode head) {
+        if (head == null) {
+            return;
+        }
+
+        ListNode originHead = head;
+
+        do {
+            System.out.print(head.val);
+            System.out.print(" ");
+            head = head.next;
+        } while (head != null);
+
+        head = originHead;
+
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         ListNode head = LCUtil.createListWith(5);
-        while (head != null) {
-            System.out.print(head.val);
-            head = head.next;
-        }
+        outputList(head);
+        outputList(head);
     }
 
 }
