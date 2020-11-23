@@ -23,7 +23,7 @@ public class PrintFooBarAlternately {
 
         private int n;
 
-        private static final Object LOCK = new Object();
+        private final Object LOCK = new Object();
 
         private AtomicInteger flag;
 
