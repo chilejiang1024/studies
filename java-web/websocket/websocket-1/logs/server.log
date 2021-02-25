@@ -1,0 +1,196 @@
+2021-02-25 10:12:28.497  INFO 178460 --- [restartedMain] work.zhili.websocket.Application         : Starting Application on Zhili-PC-COMP with PID 178460 (Z:\work\jiang-intellij-workspace\studies\java-web\websocket\websocket-1\server\target\classes started by Administrator in Z:\work\jiang-intellij-workspace\studies\java-web\websocket\websocket-1)
+2021-02-25 10:12:28.526  INFO 178460 --- [restartedMain] work.zhili.websocket.Application         : No active profile set, falling back to default profiles: default
+2021-02-25 10:12:28.642  INFO 178460 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7498c49e: startup date [Thu Feb 25 10:12:28 CST 2021]; root of context hierarchy
+2021-02-25 10:12:29.927  WARN 178460 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[work.zhili.websocket]' package. Please check your configuration.
+2021-02-25 10:12:29.967  INFO 178460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-25 10:12:30.733  INFO 178460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5f09c3e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-25 10:12:31.234  INFO 178460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 22222 (http)
+2021-02-25 10:12:31.264  INFO 178460 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-25 10:12:31.264  INFO 178460 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2021-02-25 10:12:31.269  INFO 178460 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [Z:\work\jiang-software\Java\jdk1.8.0_221_64-bit\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;Z:\work\jiang-software\Git\bin\;Z:\work\jiang-servers\maven\apache-maven-3.3.9\bin\;Z:\work\jiang-software\Java\jdk1.8.0_221_64-bit\bin\;Z:\work\jiang-software\nodejs\;Z:\work\jiang-software\python3.5.2;;Z:\work\jiang-software\CoCall5;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;.]
+2021-02-25 10:12:31.365  INFO 178460 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-25 10:12:31.365  INFO 178460 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2723 ms
+2021-02-25 10:12:31.590  INFO 178460 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-02-25 10:12:31.595  INFO 178460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-02-25 10:12:31.597  INFO 178460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-02-25 10:12:31.597  INFO 178460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-02-25 10:12:31.597  INFO 178460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-02-25 10:12:32.553  INFO 178460 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7498c49e: startup date [Thu Feb 25 10:12:28 CST 2021]; root of context hierarchy
+2021-02-25 10:12:32.636  INFO 178460 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/files],methods=[POST]}" onto java.lang.Object work.zhili.websocket.controller.FileUploadController.uploadFile(org.springframework.web.multipart.MultipartFile)
+2021-02-25 10:12:32.639  INFO 178460 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto java.lang.String work.zhili.websocket.controller.NavigationController.root()
+2021-02-25 10:12:32.639  INFO 178460 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/register],methods=[GET]}" onto java.lang.String work.zhili.websocket.controller.NavigationController.user()
+2021-02-25 10:12:32.639  INFO 178460 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/1],methods=[GET]}" onto java.lang.String work.zhili.websocket.controller.NavigationController.test1(javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-02-25 10:12:32.639  INFO 178460 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/2],methods=[GET]}" onto java.lang.String work.zhili.websocket.controller.NavigationController.test2()
+2021-02-25 10:12:32.640  INFO 178460 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/first/get],methods=[GET]}" onto java.lang.Object work.zhili.websocket.controller.TestController.firstGet()
+2021-02-25 10:12:32.641  INFO 178460 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/send-message],methods=[POST]}" onto java.lang.Object work.zhili.websocket.controller.TestController.sendMessage(java.lang.String,java.lang.String)
+2021-02-25 10:12:32.644  INFO 178460 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-02-25 10:12:32.645  INFO 178460 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-02-25 10:12:32.719  INFO 178460 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-25 10:12:32.719  INFO 178460 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-25 10:12:32.747  INFO 178460 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2021-02-25 10:12:32.801  INFO 178460 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-25 10:12:32.870  WARN 178460 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-02-25 10:12:32.983  INFO 178460 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-25 10:12:33.507  INFO 178460 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-25 10:12:33.518  WARN 178460 --- [restartedMain] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2021-02-25 10:12:33.733  INFO 178460 --- [restartedMain] o.s.w.s.s.s.ServerEndpointExporter       : Registering @ServerEndpoint class: class work.zhili.websocket.controller.InstantMessagingController
+2021-02-25 10:12:33.743  INFO 178460 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2021-02-25 10:12:33.744  INFO 178460 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-02-25 10:12:33.751  INFO 178460 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2021-02-25 10:12:33.791  INFO 178460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 22222 (http) with context path ''
+2021-02-25 10:12:33.797  INFO 178460 --- [restartedMain] work.zhili.websocket.Application         : Started Application in 5.935 seconds (JVM running for 7.388)
+2021-02-25 10:12:33.800  INFO 178460 --- [restartedMain] work.zhili.websocket.Application         : application was started in 5953 ms ...
+2021-02-25 10:13:13.263  INFO 178460 --- [http-nio-22222-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-02-25 10:13:13.263  INFO 178460 --- [http-nio-22222-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2021-02-25 10:13:13.290  INFO 178460 --- [http-nio-22222-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2021-02-25 10:13:13.343  INFO 178460 --- [http-nio-22222-exec-2] w.z.w.c.InstantMessagingController       : [1] log in
+2021-02-25 10:13:21.570  INFO 178460 --- [http-nio-22222-exec-3] w.z.w.c.InstantMessagingController       : send message: id [1], message [123]
+2021-02-25 10:13:27.082  INFO 178460 --- [http-nio-22222-exec-1] w.z.w.c.InstantMessagingController       : receive message: id [1], message [PING]
+2021-02-25 10:13:28.080  INFO 178460 --- [http-nio-22222-exec-4] w.z.w.c.InstantMessagingController       : receive message: id [1], message [PING]
+2021-02-25 10:13:29.080  INFO 178460 --- [http-nio-22222-exec-5] w.z.w.c.InstantMessagingController       : receive message: id [1], message [PING]
+2021-02-25 10:13:30.080  INFO 178460 --- [http-nio-22222-exec-6] w.z.w.c.InstantMessagingController       : receive message: id [1], message [PING]
+2021-02-25 10:13:31.079  INFO 178460 --- [http-nio-22222-exec-7] w.z.w.c.InstantMessagingController       : receive message: id [1], message [PING]
+2021-02-25 10:13:32.080  INFO 178460 --- [http-nio-22222-exec-8] w.z.w.c.InstantMessagingController       : receive message: id [1], message [PING]
+2021-02-25 10:13:33.079  INFO 178460 --- [http-nio-22222-exec-9] w.z.w.c.InstantMessagingController       : receive message: id [1], message [PING]
+2021-02-25 10:13:36.845  INFO 178460 --- [http-nio-22222-exec-10] w.z.w.c.InstantMessagingController       : send message: id [1], message [123]
+2021-02-25 10:13:37.775  INFO 178460 --- [http-nio-22222-exec-2] w.z.w.c.InstantMessagingController       : send message: id [1], message [123]
+2021-02-25 10:13:38.533  INFO 178460 --- [http-nio-22222-exec-3] w.z.w.c.InstantMessagingController       : send message: id [1], message [123]
+2021-02-25 10:13:39.382  INFO 178460 --- [http-nio-22222-exec-1] w.z.w.c.InstantMessagingController       : send message: id [1], message [123]
+2021-02-25 10:13:45.852  INFO 178460 --- [http-nio-22222-exec-4] w.z.w.c.InstantMessagingController       : receive message: id [1], message [你傻蛋]
+2021-02-25 10:13:56.748  INFO 178460 --- [http-nio-22222-exec-5] w.z.w.c.InstantMessagingController       : send message: id [1], message [你才是傻蛋]
+2021-02-25 10:14:00.558  INFO 178460 --- [http-nio-22222-exec-6] w.z.w.c.InstantMessagingController       : [1] log out
+2021-02-25 10:14:55.339  INFO 178460 --- [http-nio-22222-exec-7] w.z.w.c.InstantMessagingController       : [1] log in
+2021-02-25 10:15:05.589  INFO 178460 --- [http-nio-22222-exec-9] w.z.w.c.InstantMessagingController       : [1] log out
+2021-02-25 10:18:47.764  INFO 178460 --- [Thread-16] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7498c49e: startup date [Thu Feb 25 10:12:28 CST 2021]; root of context hierarchy
+2021-02-25 10:18:47.769  INFO 178460 --- [Thread-16] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2021-02-25 10:18:47.769  INFO 178460 --- [Thread-16] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2021-02-25 10:18:53.109  INFO 181660 --- [restartedMain] work.zhili.websocket.Application         : Starting Application on Zhili-PC-COMP with PID 181660 (Z:\work\jiang-intellij-workspace\studies\java-web\websocket\websocket-1\server\target\classes started by Administrator in Z:\work\jiang-intellij-workspace\studies\java-web\websocket\websocket-1)
+2021-02-25 10:18:53.110  INFO 181660 --- [restartedMain] work.zhili.websocket.Application         : No active profile set, falling back to default profiles: default
+2021-02-25 10:18:53.209  INFO 181660 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75529d73: startup date [Thu Feb 25 10:18:53 CST 2021]; root of context hierarchy
+2021-02-25 10:18:54.671  WARN 181660 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[work.zhili.websocket]' package. Please check your configuration.
+2021-02-25 10:18:54.717  INFO 181660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-25 10:18:55.428  INFO 181660 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$55648b23] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-25 10:18:55.984  INFO 181660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 22222 (http)
+2021-02-25 10:18:56.007  INFO 181660 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-25 10:18:56.007  INFO 181660 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2021-02-25 10:18:56.012  INFO 181660 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [Z:\work\jiang-software\Java\jdk1.8.0_221_64-bit\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;Z:\work\jiang-software\Git\bin\;Z:\work\jiang-servers\maven\apache-maven-3.3.9\bin\;Z:\work\jiang-software\Java\jdk1.8.0_221_64-bit\bin\;Z:\work\jiang-software\nodejs\;Z:\work\jiang-software\python3.5.2;;Z:\work\jiang-software\CoCall5;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;.]
+2021-02-25 10:18:56.126  INFO 181660 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-25 10:18:56.127  INFO 181660 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2917 ms
+2021-02-25 10:18:56.344  INFO 181660 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-02-25 10:18:56.349  INFO 181660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-02-25 10:18:56.350  INFO 181660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-02-25 10:18:56.350  INFO 181660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-02-25 10:18:56.350  INFO 181660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-02-25 10:18:57.225  INFO 181660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75529d73: startup date [Thu Feb 25 10:18:53 CST 2021]; root of context hierarchy
+2021-02-25 10:18:57.311  INFO 181660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/files],methods=[POST]}" onto java.lang.Object work.zhili.websocket.controller.FileUploadController.uploadFile(org.springframework.web.multipart.MultipartFile)
+2021-02-25 10:18:57.314  INFO 181660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto java.lang.String work.zhili.websocket.controller.NavigationController.root()
+2021-02-25 10:18:57.314  INFO 181660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/register],methods=[GET]}" onto java.lang.String work.zhili.websocket.controller.NavigationController.user()
+2021-02-25 10:18:57.314  INFO 181660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/1],methods=[GET]}" onto java.lang.String work.zhili.websocket.controller.NavigationController.test1(javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-02-25 10:18:57.314  INFO 181660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/2],methods=[GET]}" onto java.lang.String work.zhili.websocket.controller.NavigationController.test2()
+2021-02-25 10:18:57.315  INFO 181660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/send-message],methods=[POST]}" onto java.lang.Object work.zhili.websocket.controller.TestController.sendMessage(java.lang.String,java.lang.String)
+2021-02-25 10:18:57.316  INFO 181660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/first/get],methods=[GET]}" onto java.lang.Object work.zhili.websocket.controller.TestController.firstGet()
+2021-02-25 10:18:57.319  INFO 181660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-02-25 10:18:57.320  INFO 181660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-02-25 10:18:57.394  INFO 181660 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-25 10:18:57.394  INFO 181660 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-25 10:18:57.423  INFO 181660 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2021-02-25 10:18:57.469  INFO 181660 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-25 10:18:57.531  WARN 181660 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-02-25 10:18:57.626  INFO 181660 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-25 10:18:58.085  INFO 181660 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-25 10:18:58.096  WARN 181660 --- [restartedMain] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2021-02-25 10:18:58.296  INFO 181660 --- [restartedMain] o.s.w.s.s.s.ServerEndpointExporter       : Registering @ServerEndpoint class: class work.zhili.websocket.controller.InstantMessagingController
+2021-02-25 10:18:58.306  INFO 181660 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2021-02-25 10:18:58.307  INFO 181660 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-02-25 10:18:58.315  INFO 181660 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2021-02-25 10:18:58.354  INFO 181660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 22222 (http) with context path ''
+2021-02-25 10:18:58.358  INFO 181660 --- [restartedMain] work.zhili.websocket.Application         : Started Application in 5.87 seconds (JVM running for 6.934)
+2021-02-25 10:18:58.361  INFO 181660 --- [restartedMain] work.zhili.websocket.Application         : application was started in 5879 ms ...
+2021-02-25 10:19:03.094  INFO 181660 --- [http-nio-22222-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-02-25 10:19:03.094  INFO 181660 --- [http-nio-22222-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2021-02-25 10:19:03.118  INFO 181660 --- [http-nio-22222-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2021-02-25 10:19:03.171  INFO 181660 --- [http-nio-22222-exec-2] w.z.w.c.InstantMessagingController       : [1] log in
+2021-02-25 10:19:07.287  INFO 181660 --- [http-nio-22222-exec-1] w.z.w.c.InstantMessagingController       : receive message: id [1], message [你傻蛋]
+2021-02-25 10:19:08.252  INFO 181660 --- [http-nio-22222-exec-3] w.z.w.c.InstantMessagingController       : receive message: id [1], message [你傻蛋]
+2021-02-25 10:19:10.198  INFO 181660 --- [http-nio-22222-exec-4] w.z.w.c.InstantMessagingController       : send message: id [1], message [你才是傻蛋]
+2021-02-25 10:19:11.298  INFO 181660 --- [http-nio-22222-exec-5] w.z.w.c.InstantMessagingController       : send message: id [1], message [你才是傻蛋]
+2021-02-25 10:19:12.143  INFO 181660 --- [http-nio-22222-exec-7] w.z.w.c.InstantMessagingController       : send message: id [1], message [你才是傻蛋]
+2021-02-25 10:19:26.735  INFO 181660 --- [http-nio-22222-exec-6] w.z.w.c.InstantMessagingController       : [1] log in
+2021-02-25 10:19:30.732  INFO 181660 --- [http-nio-22222-exec-8] w.z.w.c.InstantMessagingController       : send message: id [1], message [你才是傻蛋]
+2021-02-25 10:19:31.628  INFO 181660 --- [http-nio-22222-exec-9] w.z.w.c.InstantMessagingController       : send message: id [1], message [你才是傻蛋]
+2021-02-25 10:19:44.365  INFO 181660 --- [http-nio-22222-exec-10] w.z.w.c.InstantMessagingController       : send message: id [1], message [你是傻蛋]
+2021-02-25 10:19:45.178  INFO 181660 --- [http-nio-22222-exec-2] w.z.w.c.InstantMessagingController       : send message: id [1], message [你是傻蛋]
+2021-02-25 10:20:01.747  INFO 181660 --- [http-nio-22222-exec-1] w.z.w.c.InstantMessagingController       : [1] log out
+2021-02-25 10:21:51.912  INFO 181660 --- [Thread-20] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75529d73: startup date [Thu Feb 25 10:18:53 CST 2021]; root of context hierarchy
+2021-02-25 10:21:51.916  INFO 181660 --- [Thread-20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2021-02-25 10:21:51.917  INFO 181660 --- [Thread-20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2021-02-25 10:21:52.011  INFO 181660 --- [localhost-startStop-2] w.z.w.c.InstantMessagingController       : [1] log out
+2021-02-25 10:23:49.155  INFO 182260 --- [restartedMain] work.zhili.websocket.Application         : Starting Application on Zhili-PC-COMP with PID 182260 (Z:\work\jiang-intellij-workspace\studies\java-web\websocket\websocket-1\server\target\classes started by Administrator in Z:\work\jiang-intellij-workspace\studies\java-web\websocket\websocket-1)
+2021-02-25 10:23:49.157  INFO 182260 --- [restartedMain] work.zhili.websocket.Application         : No active profile set, falling back to default profiles: default
+2021-02-25 10:23:49.212  INFO 182260 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1430445b: startup date [Thu Feb 25 10:23:49 CST 2021]; root of context hierarchy
+2021-02-25 10:23:50.205  WARN 182260 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[work.zhili.websocket]' package. Please check your configuration.
+2021-02-25 10:23:50.235  INFO 182260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-25 10:23:50.711  INFO 182260 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6af5ae1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-25 10:23:51.226  INFO 182260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 22222 (http)
+2021-02-25 10:23:51.251  INFO 182260 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-25 10:23:51.251  INFO 182260 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2021-02-25 10:23:51.256  INFO 182260 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [Z:\work\jiang-software\Java\jdk1.8.0_221_64-bit\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;Z:\work\jiang-software\Git\bin\;Z:\work\jiang-servers\maven\apache-maven-3.3.9\bin\;Z:\work\jiang-software\Java\jdk1.8.0_221_64-bit\bin\;Z:\work\jiang-software\nodejs\;Z:\work\jiang-software\python3.5.2;;Z:\work\jiang-software\CoCall5;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;.]
+2021-02-25 10:23:51.344  INFO 182260 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-25 10:23:51.345  INFO 182260 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2133 ms
+2021-02-25 10:23:51.539  INFO 182260 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-02-25 10:23:51.610  INFO 182260 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-02-25 10:23:51.611  INFO 182260 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-02-25 10:23:51.611  INFO 182260 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-02-25 10:23:51.611  INFO 182260 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-02-25 10:23:52.443  INFO 182260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1430445b: startup date [Thu Feb 25 10:23:49 CST 2021]; root of context hierarchy
+2021-02-25 10:23:52.524  INFO 182260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/files],methods=[POST]}" onto java.lang.Object work.zhili.websocket.controller.FileUploadController.uploadFile(org.springframework.web.multipart.MultipartFile)
+2021-02-25 10:23:52.527  INFO 182260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto java.lang.String work.zhili.websocket.controller.NavigationController.root()
+2021-02-25 10:23:52.527  INFO 182260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/register],methods=[GET]}" onto java.lang.String work.zhili.websocket.controller.NavigationController.user()
+2021-02-25 10:23:52.528  INFO 182260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/1],methods=[GET]}" onto java.lang.String work.zhili.websocket.controller.NavigationController.test1(javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-02-25 10:23:52.528  INFO 182260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/2],methods=[GET]}" onto java.lang.String work.zhili.websocket.controller.NavigationController.test2()
+2021-02-25 10:23:52.529  INFO 182260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/send-message],methods=[POST]}" onto java.lang.Object work.zhili.websocket.controller.TestController.sendMessage(java.lang.String,java.lang.String)
+2021-02-25 10:23:52.529  INFO 182260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/first/get],methods=[GET]}" onto java.lang.Object work.zhili.websocket.controller.TestController.firstGet()
+2021-02-25 10:23:52.532  INFO 182260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-02-25 10:23:52.533  INFO 182260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-02-25 10:23:52.608  INFO 182260 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-25 10:23:52.608  INFO 182260 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-25 10:23:52.638  INFO 182260 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2021-02-25 10:23:52.694  INFO 182260 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-25 10:23:52.776  WARN 182260 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-02-25 10:23:52.857  INFO 182260 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-25 10:23:53.329  INFO 182260 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-25 10:23:53.339  WARN 182260 --- [restartedMain] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2021-02-25 10:23:53.542  INFO 182260 --- [restartedMain] o.s.w.s.s.s.ServerEndpointExporter       : Registering @ServerEndpoint class: class work.zhili.websocket.controller.InstantMessagingController
+2021-02-25 10:23:53.552  INFO 182260 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2021-02-25 10:23:53.554  INFO 182260 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-02-25 10:23:53.560  INFO 182260 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2021-02-25 10:23:53.599  INFO 182260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 22222 (http) with context path ''
+2021-02-25 10:23:53.603  INFO 182260 --- [restartedMain] work.zhili.websocket.Application         : Started Application in 5.006 seconds (JVM running for 6.07)
+2021-02-25 10:23:53.607  INFO 182260 --- [restartedMain] work.zhili.websocket.Application         : application was started in 5019 ms ...
+2021-02-25 10:24:10.043  INFO 182260 --- [http-nio-22222-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-02-25 10:24:10.043  INFO 182260 --- [http-nio-22222-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2021-02-25 10:24:10.071  INFO 182260 --- [http-nio-22222-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2021-02-25 10:24:10.130  INFO 182260 --- [http-nio-22222-exec-2] w.z.w.c.InstantMessagingController       : [101010] log in
+2021-02-25 10:24:17.426  INFO 182260 --- [http-nio-22222-exec-1] w.z.w.c.InstantMessagingController       : send message: id [101010], message [你是傻蛋]
+2021-02-25 10:24:18.470  INFO 182260 --- [http-nio-22222-exec-3] w.z.w.c.InstantMessagingController       : send message: id [101010], message [你是傻蛋]
+2021-02-25 10:24:19.361  INFO 182260 --- [http-nio-22222-exec-4] w.z.w.c.InstantMessagingController       : send message: id [101010], message [你是傻蛋]
+2021-02-25 10:24:20.148  INFO 182260 --- [http-nio-22222-exec-5] w.z.w.c.InstantMessagingController       : send message: id [101010], message [你是傻蛋]
+2021-02-25 10:24:20.842  INFO 182260 --- [http-nio-22222-exec-6] w.z.w.c.InstantMessagingController       : send message: id [101010], message [你是傻蛋]
+2021-02-25 10:24:23.141  INFO 182260 --- [http-nio-22222-exec-7] w.z.w.c.InstantMessagingController       : receive message: id [101010], message [你傻蛋]
+2021-02-25 10:24:24.063  INFO 182260 --- [http-nio-22222-exec-8] w.z.w.c.InstantMessagingController       : receive message: id [101010], message [你傻蛋]
+2021-02-25 10:24:24.687  INFO 182260 --- [http-nio-22222-exec-9] w.z.w.c.InstantMessagingController       : receive message: id [101010], message [你傻蛋]
+2021-02-25 10:24:25.233  INFO 182260 --- [http-nio-22222-exec-10] w.z.w.c.InstantMessagingController       : receive message: id [101010], message [你傻蛋]
+2021-02-25 10:24:50.302  INFO 182260 --- [http-nio-22222-exec-2] w.z.w.c.InstantMessagingController       : receive message: id [101010], message [你傻蛋]
+2021-02-25 10:24:51.093  INFO 182260 --- [http-nio-22222-exec-1] w.z.w.c.InstantMessagingController       : receive message: id [101010], message [你傻蛋]
+2021-02-25 10:24:54.225  INFO 182260 --- [http-nio-22222-exec-3] w.z.w.c.InstantMessagingController       : [101010] log out
+2021-02-25 10:24:54.949  INFO 182260 --- [http-nio-22222-exec-4] w.z.w.c.InstantMessagingController       : [101010] log in
+2021-02-25 10:25:05.138  INFO 182260 --- [http-nio-22222-exec-5] w.z.w.c.InstantMessagingController       : receive message: id [101010], message [你傻蛋]
+2021-02-25 10:25:05.819  INFO 182260 --- [http-nio-22222-exec-6] w.z.w.c.InstantMessagingController       : receive message: id [101010], message [你傻蛋]
+2021-02-25 10:25:26.898  INFO 182260 --- [http-nio-22222-exec-8] w.z.w.c.InstantMessagingController       : send message: id [101010], message [你是傻蛋]
+2021-02-25 10:25:27.596  INFO 182260 --- [http-nio-22222-exec-9] w.z.w.c.InstantMessagingController       : send message: id [101010], message [你是傻蛋]
+2021-02-25 10:25:28.268  INFO 182260 --- [http-nio-22222-exec-10] w.z.w.c.InstantMessagingController       : send message: id [101010], message [你是傻蛋]
+2021-02-25 10:25:28.905  INFO 182260 --- [http-nio-22222-exec-2] w.z.w.c.InstantMessagingController       : send message: id [101010], message [你是傻蛋]
+2021-02-25 10:26:19.393  INFO 182260 --- [http-nio-22222-exec-1] w.z.w.c.InstantMessagingController       : receive message: id [101010], message [你傻蛋]
+2021-02-25 10:26:19.997  INFO 182260 --- [http-nio-22222-exec-3] w.z.w.c.InstantMessagingController       : receive message: id [101010], message [你傻蛋]
+2021-02-25 10:26:20.928  INFO 182260 --- [http-nio-22222-exec-4] w.z.w.c.InstantMessagingController       : receive message: id [101010], message [你傻蛋]
+2021-02-25 10:26:25.283  INFO 182260 --- [http-nio-22222-exec-5] w.z.w.c.InstantMessagingController       : [101010] log out
