@@ -3,6 +3,7 @@ package main.algorithm.leetcode;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -93,6 +94,31 @@ public class TwoSum {
             quickSort(nums, i + 1, tail);
         }
 
+        static int[] twoSumStream(int[] nums, int target) {
+            if (nums == null || nums.length == 0) {
+                return new int[0];
+            }
+
+            return Arrays.stream(nums)
+                         .parallel()
+                         .boxed()
+                         .flatMap(i -> Arrays.stream(nums).boxed().map(j -> new int[] { i, j }))
+                         .filter(ints -> ints[0] + ints[1] == target)
+                         .map(ints -> new int[] {findIndex(ints[0], nums), findIndex(ints[1], nums)})
+                         .filter(ints -> ints[0] != ints[1])
+                         .findFirst()
+                         .orElse(new int[0]);
+        }
+
+        public static int findIndex(int target, int[] nums) {
+            for (int i = 0; i < nums.length; i++) {
+                if (target == nums[i]) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
     }
 
     @Test
@@ -110,6 +136,12 @@ public class TwoSum {
         for (int i : array) {
             System.out.println(i);
         }
+    }
+
+    @Test
+    public void test3() {
+        int[] array = { 3, 2, 4 };
+        Solution.twoSumStream(array, 6);
     }
 
 }
