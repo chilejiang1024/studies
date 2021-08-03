@@ -18,6 +18,9 @@ public class LCUtil {
     }
 
     public static ListNode createListWith(int capacity) {
+        if (capacity <= 0) {
+            return null;
+        }
         ListNode head = new ListNode(1);
         ListNode cursorNode = head;
         for (int i = 2; i <= capacity; i++) {

@@ -24,4 +24,10 @@ public class ListNode {
         this.next = next;
     }
 
+    public ListNode addNext(int num) {
+        ListNode next = new ListNode(num);
+        this.next = next;
+        return next;
+    }
+
 }
