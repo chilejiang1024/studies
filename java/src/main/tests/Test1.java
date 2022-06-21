@@ -4,7 +4,6 @@ import org.junit.Test;
 
 /**
  * Title : main.tests <br>
- * Company : 北京华宇元典信息服务有限公司 <br>
  * Description :
  *
  *
